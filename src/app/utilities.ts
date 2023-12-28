@@ -11,6 +11,6 @@ export type Route = {
 
 export const routes: Route[] = [
   { routeEnum: SelectedPage.HOME, routePath: "/" },
-  { routeEnum: SelectedPage.ABOUTME, routePath: "/about_me" },
-  { routeEnum: SelectedPage.CONTACTINFO, routePath: "/contact_info" },
+  { routeEnum: SelectedPage.ABOUTME, routePath: "/about-me" },
+  { routeEnum: SelectedPage.CONTACTINFO, routePath: "/contact-info" },
 ];
