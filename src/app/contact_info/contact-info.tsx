@@ -1,19 +1,24 @@
 "use client";
 
-import { Fragment, useRef, useState } from "react";
-import { Dispatch, SetStateAction } from "react";
+import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
 export default function DisplayContactInfoModal() {
   const [open, isOpen] = useState(false);
   return (
     <>
-      <button className="font-medium px-3 py-2 text-slate-700 rounded-md"
-      onClick={() => isOpen(!open)}>
-        <span className="relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
-              before:bottom-0 before:left-0 before:bg-black
+      <button
+        className="font-medium px-3 py-2 text-slate-700 rounded-md"
+        onClick={() => isOpen(!open)}
+      >
+        <span
+          className="flex relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
+              before:-bottom-1.5 before:left-0 before:bg-slate-700
               before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
-              before:transition before:ease-in-out before:duration-300">Contact Info</span>
+              before:transition before:ease-in-out before:duration-300"
+        >
+          Contact Info
+        </span>
       </button>
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={isOpen}>

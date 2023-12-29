@@ -1,13 +1,6 @@
-'use client'
-
-import { useRouter } from "next/navigation";
-import { SelectedPage, Route, routes } from "./utilities";
+import { redirect } from "next/navigation";
+import { SelectedPage, routes } from "./utilities";
 
 export default function Page() {
-  const router = useRouter();
-  router.push(routes.find(i => i.routeEnum == SelectedPage.ABOUTME)?.routePath!)
-  return (
-    <>
-    </>
-  );
+  redirect(routes.find((i) => i.routeEnum == SelectedPage.ABOUTME)?.routePath!)  
 }
