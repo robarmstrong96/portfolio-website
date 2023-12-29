@@ -1,6 +1,6 @@
-export function TopHeader() {
+export function Header() {
   return (
-    <div className="mx-auto bg-white shadow-md">
+    <div className="mx-auto bg-neutral-50 shadow-md">
       <div className="h-32 py-8">
         <Title />
       </div>
