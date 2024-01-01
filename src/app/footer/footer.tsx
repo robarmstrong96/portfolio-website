@@ -6,7 +6,7 @@ import DisplayContactInfoModal from "../contact_info/contact-info";
 
 export function Footer() {
   return (
-    <div className="fixed inset-x-0 bottom-0 m-auto">
+    <div className="fixed inset-x-0 bottom-0 m-auto bg-white dark:bg-slate-900 shadow-lg">
       <ListPages />
     </div>
   );
@@ -14,7 +14,7 @@ export function Footer() {
 
 function ListPages() {
   return (
-    <div className="flex justify-center space-x-5 py-1">
+    <div className="flex justify-center space-x-5 py-1 ">
       <div>
         <PageButton
           route={routes.find((i) => i.routeEnum == SelectedPage.ABOUTME)!}

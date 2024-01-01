@@ -13,20 +13,20 @@ function CenterSection() {
   return (
     <div>
       <div className="flex justify-center py-[200px]">
-        <div className="relative min-w-[192px] min-h-[192px] max-h-[384px] max-w-[384px] py-5">
+        <div className="min-w-[192px] min-h-[192px] max-h-[384px] max-w-[384px] py-5 max-[384px]:hidden">
           <SelfImage />
         </div>
         <div className="px-5 flex flex-col justify-center justify-items-center dark:text-slate-300">
-          <div className="text-5xl sm:text-2xl md:text-3xl lg:text-4xl flex justify-start">
+          <div className="text-5xl max-[384px]:text-xl max-[768px]:text-2xl md:text-3xl lg:text-4xl flex justify-start">
             <h1 className="font-semibold">Programmer, tinkerer, hobbyist. </h1>
           </div>
           <div className="flex justify-start text-left">
-            <h2 className="font-medium text-xl sm:text-md md:text-md lg:text-md ">
+            <h2 className="font-medium text-xl max-[384px]:text-xs max-[768px]:text-sm md:text-md lg:text-md ">
               I finally got around to building this site...
             </h2>
           </div>
           <div className="py-6 flex justify-start max-w-[700px]">
-            <div className="text-md sm:text-md md:text-md lg:text-md ">
+            <div className="text-md max-[384px]:text-xs max-[768px]:text-sm md:text-md lg:text-md ">
               <p>
                 Hello! I&apos;m a full-stack software engineer who enjoys
                 everything technology, listenting to IDM (on rare occassions
@@ -60,8 +60,8 @@ function SelfImage() {
         width: '100%',
         height: 'auto',
       }}
-      width={500}
-      height={300}
+      width={384}
+      height={384}
       placeholder = 'empty'
       className="rounded-[50%] shadow-md"
     />
