@@ -36,12 +36,12 @@ function PageButton({ route }: { route: Route }) {
   const router = useRouter();
   return (
     <button
-      className="font-medium px-3 py-2 text-slate-700 rounded-md"
+      className="font-medium px-3 py-2 text-slate-700 dark:text-slate-300 rounded-md"
       onClick={() => router.push(route.routePath!)}
     >
       <span
         className="relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
-              before:-bottom-1.5 before:left-0 before:bg-slate-700
+              before:-bottom-1.5 before:left-0 before:bg-slate-700 dark:before:bg-slate-300
               before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
               before:transition before:ease-in-out before:duration-300"
       >

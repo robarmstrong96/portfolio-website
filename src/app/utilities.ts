@@ -1,13 +1,13 @@
 export const enum SelectedPage {
   ABOUTME = "About Me",
   PROJECTS = "Projects",
-  CONTACTINFO = "Contact Info"
+  CONTACTINFO = "Contact Info/Links",
 }
 
 /**
  * Defined type 'Route'
- * 
- * @property routeEnum 
+ *
+ * @property routeEnum
  */
 export type Route = {
   routeEnum: SelectedPage;
@@ -19,6 +19,6 @@ export type Route = {
  */
 export const routes: Route[] = [
   { routeEnum: SelectedPage.PROJECTS, routePath: "/projects" },
-  { routeEnum: SelectedPage.ABOUTME, routePath: "/about-me" },  
-  { routeEnum: SelectedPage.CONTACTINFO, routePath: "/contact_info" }
+  { routeEnum: SelectedPage.ABOUTME, routePath: "/about-me" },
+  { routeEnum: SelectedPage.CONTACTINFO, routePath: "/contact_info" },
 ];

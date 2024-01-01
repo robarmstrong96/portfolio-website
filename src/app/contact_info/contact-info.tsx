@@ -8,12 +8,12 @@ export default function DisplayContactInfoModal() {
   return (
     <>
       <button
-        className="font-medium px-3 py-2 text-slate-700 rounded-md"
+        className="font-medium px-3 py-2 text-slate-700 dark:text-slate-300 rounded-md"
         onClick={() => isOpen(!open)}
       >
         <span
           className="flex relative before:content-[''] before:absolute before:block before:w-full before:h-[2px] 
-              before:-bottom-1.5 before:left-0 before:bg-slate-700
+              before:-bottom-1.5 before:left-0 before:bg-slate-700 dark:before:bg-slate-300
               before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
               before:transition before:ease-in-out before:duration-300"
         >
@@ -31,7 +31,7 @@ export default function DisplayContactInfoModal() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+            <div className="fixed inset-0 bg-gray-500 dark:bg-black dark:bg-opacity-75 bg-opacity-75 transition-opacity" />
           </Transition.Child>
 
           <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
@@ -45,13 +45,13 @@ export default function DisplayContactInfoModal() {
                 leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                 leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
               >
-                <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                  <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white dark:bg-slate-600 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                  <div className="bg-white dark:bg-slate-600 px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                     <div className="sm:flex-col sm:items-start">
                       <div className="mt-3 my-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                         <Dialog.Title
                           as="h3"
-                          className="text-base font-semibold leading-6 text-gray-900"
+                          className="text-base font-semibold leading-6 text-gray-900 dark:text-slate-300"
                         >
                           Email
                         </Dialog.Title>
@@ -66,7 +66,7 @@ export default function DisplayContactInfoModal() {
                       <div className="mt-3 my-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                         <Dialog.Title
                           as="h3"
-                          className="text-base font-semibold leading-6 text-gray-900"
+                          className="text-base font-semibold leading-6 text-gray-900 dark:text-slate-300"
                         >
                           Github
                         </Dialog.Title>
@@ -84,7 +84,7 @@ export default function DisplayContactInfoModal() {
                       <div className="mt-3 my-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                         <Dialog.Title
                           as="h3"
-                          className="text-base font-semibold leading-6 text-gray-900"
+                          className="text-base font-semibold leading-6 text-gray-900 dark:text-slate-300"
                         >
                           LinkedIn
                         </Dialog.Title>
