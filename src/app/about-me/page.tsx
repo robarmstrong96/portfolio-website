@@ -32,7 +32,7 @@ function CenterSection() {
                 everything technology, listenting to obscure electronic music
                 (on rare occassions even attempting to produce electronic
                 music), indulging in expensive hobbies, and several other
-                things. As of now, there's not much to showcase, but I hope to
+                things. As of now, there is not much to showcase, but I hope to
                 flesh out this website over the coming years with whatever work
                 I&apos;ve done and think is worth sharing. I am currently in the
                 process of filling out my &apos;Projects&apos; section with
