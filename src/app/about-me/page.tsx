@@ -34,7 +34,7 @@ function CenterSection() {
                 expensive hobbies, and several other things. I hope to flesh out
                 this website over the coming years with whatever work I&apos;ve
                 done and think is worth sharing. I am currently in the process of
-                filling out my &apos;Projects&apos; scetion with current projects I've
+                filling out my &apos;Projects&apos; scetion with current projects I&apos;ve
                 worked on.
               </p>
               <br />
