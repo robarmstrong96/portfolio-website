@@ -12,7 +12,7 @@ function BottomSection() {
 function CenterSection() {
   return (
     <div>
-      <div className="flex justify-center py-[200px]">
+      <div className="flex justify-center py-[8%]">
         <div className="min-w-[192px] min-h-[192px] max-h-[384px] max-w-[384px] py-5 max-[384px]:hidden">
           <SelfImage />
         </div>
@@ -29,15 +29,17 @@ function CenterSection() {
             <div className="text-md max-[384px]:text-xs max-[768px]:text-sm md:text-md lg:text-md ">
               <p>
                 Hello! I&apos;m a full-stack software engineer who enjoys
-                everything technology, listenting to IDM (on rare occassions
-                even attempting to produce electronic music), indulging in
-                expensive hobbies, and several other things. I hope to flesh out
-                this website over the coming years with whatever work I&apos;ve
-                done and think is worth sharing. I am currently in the process of
-                filling out my &apos;Projects&apos; scetion with current projects I&apos;ve
-                worked on and hope to have it done soon.
+                everything technology, listenting to obscure electronic music
+                (on rare occassions even attempting to produce electronic
+                music), indulging in expensive hobbies, and several other
+                things. As of now, there is not much to showcase, but I hope to
+                flesh out this website over the coming years with whatever work
+                I&apos;ve done and think is worth sharing. I am currently in the
+                process of filling out my &apos;Projects&apos; section with
+                current projects I&apos;ve worked on and hope to have it done
+                soon.
               </p>
-              <br/>
+              <br />
               <p>
                 Feel free to check out my Github, LinkedIn, and Email down below
                 if you&apos;d like to look at any of my work or get in touch.
@@ -57,12 +59,12 @@ function SelfImage() {
       alt="A picture of me"
       sizes="100vw"
       style={{
-        width: '100%',
-        height: 'auto',
+        width: "100%",
+        height: "auto",
       }}
       width={384}
       height={384}
-      placeholder = 'empty'
+      placeholder="empty"
       className="rounded-[50%] shadow-md"
     />
   );
