@@ -12,7 +12,7 @@ function BottomSection() {
 function CenterSection() {
   return (
     <div>
-      <div className="flex justify-center py-[200px]">
+      <div className="flex justify-center py-[8%]">
         <div className="min-w-[192px] min-h-[192px] max-h-[384px] max-w-[384px] py-5 max-[384px]:hidden">
           <SelfImage />
         </div>
