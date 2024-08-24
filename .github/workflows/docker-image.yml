@@ -31,4 +31,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: ghcr.io/${{ github.repository }}/portfolio-website:latest
+        tags: ghcr.io/${{ github.repository }}:latest
