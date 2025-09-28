@@ -6,12 +6,12 @@ export default function Page() {
 
 function CenterSection() {
   return (
-    <div className="relative isolate min-h-[calc(100vh-6rem)] overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 dark:from-stone-950 dark:via-zinc-950 dark:to-stone-900">
+    <div className="relative isolate min-h-[calc(100vh-8rem)] overflow-hidden bg-gradient-to-br from-[#fff3e1] via-[#fde2bb] to-[#fdf3e6] pb-16 dark:from-[#1d140d] dark:via-[#21170e] dark:to-[#0c0a09]">
       <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 flex justify-center blur-3xl">
         <div className="h-48 w-[36rem] bg-gradient-to-r from-amber-300/60 via-orange-300/60 to-amber-200/60 opacity-40 dark:from-amber-500/30 dark:via-orange-500/30 dark:to-amber-500/30" />
       </div>
 
-      <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 py-16 sm:px-10 lg:px-16">
+      <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 pt-16 pb-32 sm:px-10 lg:px-16">
         <section className="grid gap-10 rounded-3xl border border-amber-200/60 bg-amber-50/80 p-10 shadow-2xl backdrop-blur-xl transition-colors dark:border-stone-700/60 dark:bg-stone-900/70 dark:shadow-black/30 max-lg:p-8 lg:grid-cols-[1.1fr,0.9fr]">
           <div className="flex flex-col gap-6 text-stone-900 dark:text-amber-100">
             <div className="flex flex-wrap items-center gap-3 text-stone-600 dark:text-amber-200/80">

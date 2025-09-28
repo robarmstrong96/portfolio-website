@@ -22,7 +22,21 @@
       rgba(255, 228, 189, 0.55) 0%,
       rgba(255, 228, 189, 0) 55%
     ),
-    linear-gradient(145deg, #fef7ec 0%, #fde8c8 48%, #f8d29c 100%);
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(255, 214, 170, 0.35) 0%,
+      rgba(255, 214, 170, 0.05) 42%,
+      rgba(var(--background-base) / 0.65) 72%,
+      rgba(var(--background-base) / 1) 100%
+    ),
+    linear-gradient(
+      150deg,
+      rgba(255, 244, 220, 0.85) 0%,
+      rgba(255, 227, 188, 0.65) 40%,
+      rgba(255, 211, 158, 0.45) 58%,
+      rgba(var(--background-base) / 0.96) 78%,
+      rgba(var(--background-base) / 1) 100%
+    );
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,7 +60,21 @@
         rgba(92, 58, 30, 0.4) 0%,
         rgba(92, 58, 30, 0) 55%
       ),
-      linear-gradient(160deg, #0f0b08 0%, #1a130d 46%, #23170f 100%);
+      radial-gradient(
+        circle at 52% 46%,
+        rgba(196, 126, 62, 0.24) 0%,
+        rgba(196, 126, 62, 0.06) 40%,
+        rgba(var(--background-base) / 0.7) 70%,
+        rgba(var(--background-base) / 1) 100%
+      ),
+      linear-gradient(
+        160deg,
+        rgba(26, 18, 13, 0.95) 0%,
+        rgba(28, 20, 14, 0.85) 35%,
+        rgba(35, 24, 16, 0.7) 58%,
+        rgba(var(--background-base) / 0.85) 78%,
+        rgba(var(--background-base) / 1) 100%
+      );
   }
 }
 
@@ -68,6 +96,6 @@ body::before {
   pointer-events: none;
   background-image: var(--app-surface);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: 130% 130%;
+  background-position: center top;
 }
