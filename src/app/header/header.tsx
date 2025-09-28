@@ -2,8 +2,8 @@ import { ThemeSwitchHandler } from "../theme_switch/theme_switch";
 
 export function Header() {
   return (
-    <div className="fixed inset-x-0 top-0 z-50 min-w-full bg-neutral-50 shadow-md dark:bg-gray-900">
-      <div className="h-32 py-8 grid grid-cols-1">
+    <div className="fixed inset-x-0 top-0 z-50 min-w-full border-b border-amber-200/60 bg-amber-50/90 backdrop-blur-xl shadow-md dark:border-stone-800/70 dark:bg-stone-950/85">
+      <div className="grid h-32 grid-cols-1 py-8">
         <div className="flex justify-center">
           <Title />
         </div>
@@ -15,7 +15,7 @@ export function Header() {
 function Title() {
   return (
     <div>
-      <h1 className="max-[384px]:text-4xl text-5xl dark:text-slate-300 font-bold antialiased">
+      <h1 className="text-5xl font-bold antialiased text-stone-900 max-[384px]:text-4xl dark:text-amber-100">
         Kyle Armstrong
       </h1>
       <SubTitle />
@@ -26,7 +26,7 @@ function Title() {
 function SubTitle() {
   return (
     <div>
-      <h6 className="max-[384px]:text-xs max-[274px]:hidden py-1 flex justify-center text-md text-gray-500 dark:text-slate-400">
+      <h6 className="flex justify-center py-1 text-md text-amber-700 max-[384px]:text-xs max-[274px]:hidden dark:text-amber-200/80">
         full-stack software engineer
       </h6>
     </div>

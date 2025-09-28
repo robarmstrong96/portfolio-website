@@ -16,6 +16,11 @@
   }
 }
 
+html,
+body {
+  background-color: rgb(var(--background-base));
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: radial-gradient(
