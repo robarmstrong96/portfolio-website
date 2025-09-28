@@ -6,6 +6,12 @@
   --foreground-rgb: 30 24 20;
   --background-base: 255 245 232;
   --background-accent: 255 236 214;
+  --app-surface: radial-gradient(
+    circle at top,
+    rgb(var(--background-accent) / 0.35) 0%,
+    rgb(var(--background-base) / 0.7) 50%,
+    rgb(var(--background-base)) 100%
+  );
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,19 +25,13 @@
 html,
 body {
   min-height: 100%;
-}
-
-html {
-  background: radial-gradient(
-      circle at top,
-      rgb(var(--background-accent) / 0.35) 0%,
-      rgb(var(--background-base) / 0.7) 50%,
-      rgb(var(--background-base)) 100%
-    )
-    rgb(var(--background-base));
+  background-color: rgb(var(--background-base)) !important;
+  background-image: var(--app-surface) !important;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: inherit;
 }
