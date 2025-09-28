@@ -6,7 +6,7 @@ import DisplayContactInfoModal from "../contact_info/contact-info";
 
 export function Footer() {
   return (
-    <div className="fixed inset-x-0 bottom-0 m-auto bg-white dark:bg-slate-900 shadow-lg">
+    <div className="fixed inset-x-0 bottom-0 z-50 m-auto bg-white shadow-lg dark:bg-slate-900">
       <ListPages />
     </div>
   );
