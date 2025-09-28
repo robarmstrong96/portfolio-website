@@ -86,23 +86,14 @@ body {
 
 html {
   background-color: rgb(var(--background-base));
+  background-image: var(--app-surface);
+  background-repeat: no-repeat;
+  background-size: 220% 220%;
+  background-position: center top;
+  background-attachment: fixed;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  position: relative;
   background-color: transparent;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: -20vh -20vw;
-  z-index: -1;
-  pointer-events: none;
-  background-image: var(--app-surface);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 160% 160%;
-  transform: translateZ(0);
 }
