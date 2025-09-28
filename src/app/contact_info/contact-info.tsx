@@ -75,6 +75,7 @@ export default function DisplayContactInfoModal() {
                             <a
                               href="https://github.com/robarmstrong96"
                               target="_blank"
+                              rel="noopener noreferrer"
                             >
                               github.com/robarmstrong96
                             </a>
@@ -93,6 +94,7 @@ export default function DisplayContactInfoModal() {
                             <a
                               href="https://www.linkedin.com/in/robert-kyle-armstrong/"
                               target="_blank"
+                              rel="noopener noreferrer"
                             >
                               linkedin.com/in/robert-kyle-armstrong/
                             </a>
