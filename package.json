@@ -20,7 +20,7 @@
     "headlessui": "^0.0.0",
     "heroicons": "^2.1.1",
     "lottie-web": "^5.12.2",
-    "next": "^14.2.3",
+    "next": "^14.2.32",
     "next-themes": "^0.3.0",
     "nodemon": "^3.1.4",
     "npm-watch": "^0.13.0",
