@@ -2,7 +2,7 @@ import { ThemeSwitchHandler } from "../theme_switch/theme_switch";
 
 export function Header() {
   return (
-    <div className="sticky top-0 left-0 right-0 min-w-full bg-neutral-50 dark:bg-gray-900 shadow-md">
+    <div className="fixed inset-x-0 top-0 z-50 min-w-full bg-neutral-50 shadow-md dark:bg-gray-900">
       <div className="h-32 py-8 grid grid-cols-1">
         <div className="flex justify-center">
           <Title />
