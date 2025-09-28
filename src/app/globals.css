@@ -4,29 +4,37 @@
 
 :root {
   --foreground-rgb: 30 24 20;
-  --background-base: 255 245 232;
-  --background-accent: 255 236 214;
+  --background-base: 253 243 230;
+  --background-accent: 250 232 204;
+  --background-glow: 255 216 173;
   --app-surface: radial-gradient(
-    circle at top,
-    rgb(var(--background-accent) / 0.35) 0%,
-    rgb(var(--background-base) / 0.7) 50%,
+    circle at 18% 18%,
+    rgb(var(--background-glow)) 0%,
+    rgb(var(--background-accent)) 48%,
     rgb(var(--background-base)) 100%
   );
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 250 240 225;
-    --background-base: 19 14 11;
-    --background-accent: 28 20 16;
+    --foreground-rgb: 248 240 228;
+    --background-base: 12 10 9;
+    --background-accent: 18 15 13;
+    --background-glow: 68 52 36;
+    --app-surface: radial-gradient(
+      circle at 22% 22%,
+      rgb(var(--background-glow)) 0%,
+      rgb(var(--background-accent)) 55%,
+      rgb(var(--background-base)) 100%
+    );
   }
 }
 
 html,
 body {
   min-height: 100%;
-  background-color: rgb(var(--background-base)) !important;
-  background-image: var(--app-surface) !important;
+  background: var(--app-surface);
+  background-color: rgb(var(--background-base));
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
