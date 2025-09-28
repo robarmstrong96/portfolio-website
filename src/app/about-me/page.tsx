@@ -69,36 +69,31 @@ function CenterSection() {
 }
 
 function SelfImage() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [minDurationPassed, setMinDurationPassed] = useState(false);
-  const minDuration = 300; // Minimum duration for animation in milliseconds (e.g., 1 second)
-  const imageRef = useRef<HTMLImageElement | null>(null); // Type the ref as HTMLImageElement
+  const [hasLoaded, setHasLoaded] = useState(false);
+  const [hasMinDurationElapsed, setHasMinDurationElapsed] = useState(false);
+  const minDuration = 300; // Minimum duration for the loading animation in milliseconds
+  const imageRef = useRef<HTMLImageElement | null>(null);
 
   useEffect(() => {
-    // Check if the image is already cached
     if (imageRef.current && imageRef.current.complete) {
-      setIsLoading(false); // Image is cached, skip animation
-      setMinDurationPassed(true); // Skip minimum duration if cached
-    } else {
-      // Set a timer for the minimum duration if image is not cached
-      const timer = setTimeout(() => {
-        setMinDurationPassed(true);
-      }, minDuration);
-      return () => clearTimeout(timer); // Clean up timer on unmount
+      // Skip the animation entirely if the image is already in the browser cache
+      setHasLoaded(true);
+      setHasMinDurationElapsed(true);
+      return;
     }
-  }, []);
+
+    const timer = setTimeout(() => {
+      setHasMinDurationElapsed(true);
+    }, minDuration);
+
+    return () => clearTimeout(timer);
+  }, [minDuration]);
 
   const handleImageLoadComplete = () => {
-    if (minDurationPassed) {
-      setIsLoading(false);
-    }
+    setHasLoaded(true);
   };
 
-  useEffect(() => {
-    if (minDurationPassed && imageRef.current && imageRef.current.complete) {
-      setIsLoading(false);
-    }
-  }, [minDurationPassed]);
+  const isLoading = !(hasLoaded && hasMinDurationElapsed);
 
   return (
     <div
@@ -106,6 +101,7 @@ function SelfImage() {
       style={{
         width: "384px",
         height: "384px",
+        position: "relative",
       }}
     >
       <DotLottieReact
@@ -118,7 +114,9 @@ function SelfImage() {
           opacity: isLoading ? 1 : 0,
           visibility: isLoading ? "visible" : "hidden",
           transition: "opacity 0.5s ease-out, visibility 0.5s ease-out",
-          position: "absolute", // Overlay on the image
+          position: "absolute",
+          inset: 0,
+          pointerEvents: "none",
         }}
       />
       <Image
@@ -136,7 +134,7 @@ function SelfImage() {
           transition: "opacity 1s ease-in-out",
         }}
         className="rounded-[50%] shadow-md"
-        onLoad={handleImageLoadComplete}
+        onLoadingComplete={handleImageLoadComplete}
       />
     </div>
   );
