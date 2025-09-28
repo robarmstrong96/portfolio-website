@@ -1,7 +1,18 @@
 "use client";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import React, { useState, useEffect, useRef } from "react";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+
+const DotLottie = dynamic(
+  () =>
+    import("@lottiefiles/dotlottie-react").then((mod) => mod.DotLottieReact),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="h-full w-full animate-pulse rounded-full bg-gradient-to-br from-amber-200 via-orange-200 to-amber-100 dark:from-amber-500/30 dark:via-orange-500/30 dark:to-amber-500/30" />
+    ),
+  }
+) as typeof import("@lottiefiles/dotlottie-react").DotLottieReact;
 
 export default function Page() {
   return <CenterSection />;
@@ -264,7 +275,7 @@ function SelfImage() {
     return () => clearTimeout(timer);
   }, [minDuration]);
 
-  const handleImageLoadComplete = () => {
+  const handleImageLoad = () => {
     setHasLoaded(true);
   };
 
@@ -272,7 +283,7 @@ function SelfImage() {
 
   return (
     <div className="relative flex aspect-square w-full max-w-[18rem] items-center justify-center rounded-[50%]">
-      <DotLottieReact
+      <DotLottie
         src="/image-load.lottie"
         autoplay
         loop
@@ -302,7 +313,7 @@ function SelfImage() {
           transition: "opacity 1s ease-in-out",
         }}
         className="rounded-[50%] shadow-md"
-        onLoadingComplete={handleImageLoadComplete}
+        onLoad={handleImageLoad}
       />
     </div>
   );
