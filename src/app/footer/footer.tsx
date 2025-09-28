@@ -6,29 +6,17 @@ import DisplayContactInfoModal from "../contact_info/contact-info";
 
 export function Footer() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 m-auto border-t border-amber-200/60 bg-amber-100/90 backdrop-blur-xl shadow-lg dark:border-stone-800/70 dark:bg-stone-950/85">
-      <ListPages />
-    </div>
-  );
-}
-
-function ListPages() {
-  return (
-    <div className="flex justify-center space-x-5 py-1 ">
-      <div>
+    <footer className="fixed inset-x-0 bottom-0 z-50 h-20 border-t border-amber-200/60 bg-amber-100/90 backdrop-blur-xl shadow-lg dark:border-stone-800/70 dark:bg-stone-950/85">
+      <nav className="mx-auto flex h-full w-full max-w-5xl items-center justify-center gap-6 px-6">
         <PageButton
           route={routes.find((i) => i.routeEnum == SelectedPage.ABOUTME)!}
         />
-      </div>
-      <div>
         <PageButton
           route={routes.find((i) => i.routeEnum == SelectedPage.PROJECTS)!}
         />
-      </div>
-      <div>
         <DisplayContactInfoModal />
-      </div>
-    </div>
+      </nav>
+    </footer>
   );
 }
 
