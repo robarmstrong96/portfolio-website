@@ -1,13 +1,10 @@
 import "./globals.css";
 import "./background-animated.css"
 
-import { Inter } from "next/font/google";
 import { Header } from "./header/header";
 import { Footer } from "./footer/footer";
 import type { Metadata } from "next";
 import { Providers } from "./providers";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Kyle Armstrong",
@@ -21,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} flex min-h-screen flex-col`}>
+      <body className="flex min-h-screen flex-col font-sans">
         <Header />
         <main className="flex-1 pb-20 pt-32">
           <Providers>{children}</Providers>
