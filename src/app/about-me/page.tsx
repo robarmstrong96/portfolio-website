@@ -23,27 +23,37 @@ function CenterSection() {
               </span>
             </div>
             <h1 className="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-              Programmer, tinkerer, relentless explorer of ideas.
+              Hi, I’m Kyle.
             </h1>
             <p className="text-lg leading-relaxed text-stone-700 dark:text-amber-200/80">
-              I&#39;m a full-stack engineer who finds joy in building thoughtful
-              experiences and experimenting with new technologies. When I&#39;m
-              not writing code you can probably find me digging through obscure
-              electronic records, assembling hardware, or chasing down a new
-              hobby just to see how it works.
+              I’m a full-stack engineer from Newport News, Virginia. I spend my time writing code, 
+              building small form-factor PCs, designing parts in CAD, 3D printing, running a homelab, 
+              and making electronic music.
             </p>
             <div className="grid gap-6 sm:grid-cols-2">
               <InfoCard
-                title="Crafting &amp; Shipping"
-                description="From interactive web apps to physical prototypes, I love taking an idea from sketch to reality."
+                title="Building things"
+                description="Hardware projects, CAD designs, and 3D prints."
                 accent="from-amber-400/40 via-orange-300/40 to-transparent"
                 emoji="🛠️"
               />
               <InfoCard
-                title="Always Learning"
-                description="Recent dives include edge runtimes, creative coding, and modular synthesis—there&#39;s always a new rabbit hole."
+                title="Running systems"
+                description="Homelab servers, self-hosted tools, and experiments."
                 accent="from-amber-500/35 via-yellow-200/35 to-transparent"
-                emoji="🧠"
+                emoji="🖥️"
+              />
+              <InfoCard
+                title="Customizing setups"
+                description="Linux ricing, workflow tweaks, and configs."
+                accent="from-amber-400/40 via-orange-300/40 to-transparent"
+                emoji="💻"
+              />
+              <InfoCard
+                title="Making sound"
+                description="Electronic music, synths, and production experiments."
+                accent="from-amber-500/35 via-yellow-200/35 to-transparent"
+                emoji="🎶"
               />
             </div>
           </div>
@@ -55,10 +65,10 @@ function CenterSection() {
               </div>
             </div>
             <ul className="grid gap-3 text-sm text-stone-700 dark:text-amber-100/80">
-              <QuickFact label="Based in" value="Austin, TX" />
-              <QuickFact label="Currently exploring" value="AI-assisted tooling &amp; creative coding" />
-              <QuickFact label="Favorite mediums" value="TypeScript, React, analog synths" />
-              <QuickFact label="What I&#39;m building next" value="An experimental projects showcase" />
+              <QuickFact label="Location" value="Newport News, Virginia" />
+              <QuickFact label="Current focus" value="3D printing, CAD design, and homelab work" />
+              <QuickFact label="Projects" value="PC builds, car parts, self-hosted tools" />
+              <QuickFact label="Next up" value="More experiments across hardware and software" />
             </ul>
           </div>
         </section>
@@ -69,19 +79,14 @@ function CenterSection() {
               What drives me
             </h2>
             <p className="text-lg leading-relaxed">
-              I enjoy building and experimenting—whether it&#39;s hardware,
-              software, or a side project that piques my interest. I&#39;m
-              constantly learning and expanding my skill set, always focused on
-              creating something meaningful and well-crafted.
+              I work across software and hardware: writing code, putting together PCs, 
+              designing in CAD, and running a homelab.
             </p>
             <p className="leading-relaxed">
-              This site is still a work in progress. I&#39;m assembling a
-              showcase that blends personal experiments with production-ready
-              work, along with behind-the-scenes write-ups and process notes.
+              This site is a place to post projects and notes as I go.
             </p>
             <p className="leading-relaxed">
-              Content will continue to evolve here, so check back for updates
-              as new projects, articles, and collaborations roll out.
+              More will show up here over time.
             </p>
           </div>
 
@@ -91,16 +96,20 @@ function CenterSection() {
             </h3>
             <div className="grid gap-4">
               <HighlightItem
-                title="Hands-on with edge runtimes"
-                description="Deploying real-time features with minimal latency using Next.js App Router."
+                title="Printed a new car part"
+                description="Tested a fresh CAD design on the car."
               />
               <HighlightItem
-                title="Designing creative coding sketches"
-                description="Experimenting with shader-based visuals and generative art installations."
+                title="Tweaked the homelab"
+                description="Added a new service and cleaned up configs."
               />
               <HighlightItem
-                title="Building a modular synth rig"
-                description="Combining code, hardware, and music theory into a tactile sound playground."
+                title="Riced a Linux setup"
+                description="Customized the desktop and workflows."
+              />
+              <HighlightItem
+                title="Made some music"
+                description="Recorded and played around with new tracks."
               />
             </div>
           </div>
@@ -110,14 +119,10 @@ function CenterSection() {
           <div className="space-y-6 text-stone-800 dark:text-amber-100">
             <h2 className="text-2xl font-semibold">Connect with me</h2>
             <p>
-              If you&#39;d like to see more of my work or collaborate on an
-              idea, I&#39;d love to chat. You can reach out via GitHub,
-              LinkedIn, or email—links are in the contact section. I&#39;m
-              always open to conversations.
+              My work is on GitHub, LinkedIn, and here. Use the links below to check it out.
             </p>
             <p className="text-sm text-stone-600 dark:text-amber-200/70">
-              Bonus: mention your favorite synth, playlist, or side project
-              when you say hi.
+              Software, hardware, and side projects all get posted over time.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -133,12 +138,12 @@ function CenterSection() {
             />
             <ConnectionCard
               title="Email"
-              description="Drop me a line for projects, jam sessions, or just to say hi."
+              description="For projects or collaboration."
               href="mailto:hello@example.com"
             />
             <ConnectionCard
               title="Now page"
-              description="A living snapshot of what I&#39;m learning and building."
+              description="A snapshot of what I’m working on."
               href="#"
             />
           </div>
