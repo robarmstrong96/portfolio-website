@@ -3,25 +3,108 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 220, 219, 214;
-  --background-end-rgb: 220, 219, 214;
+  --foreground-rgb: 30 24 20;
+  --background-base: 253 243 230;
+  --background-accent: 250 232 204;
+  --background-glow: 255 216 173;
+  --app-surface: radial-gradient(
+      circle at 16% 20%,
+      rgba(255, 214, 170, 0.85) 0%,
+      rgba(255, 214, 170, 0) 46%
+    ),
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(255, 190, 150, 0.6) 0%,
+      rgba(255, 190, 150, 0) 40%
+    ),
+    radial-gradient(
+      circle at 50% 82%,
+      rgba(255, 228, 189, 0.55) 0%,
+      rgba(255, 228, 189, 0) 55%
+    ),
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(255, 214, 170, 0.35) 0%,
+      rgba(255, 214, 170, 0.05) 42%,
+      rgba(var(--background-base) / 0.65) 72%,
+      rgba(var(--background-base) / 1) 100%
+    ),
+    linear-gradient(
+      150deg,
+      rgba(255, 244, 220, 0.85) 0%,
+      rgba(255, 227, 188, 0.65) 40%,
+      rgba(255, 211, 158, 0.45) 58%,
+      rgba(var(--background-base) / 0.96) 78%,
+      rgba(var(--background-base) / 1) 100%
+    );
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 55 65 81;
-    --background-end-rgb: 55 65 81;
+    --foreground-rgb: 248 240 228;
+    --background-base: 34 25 18;
+    --background-accent: 44 32 24;
+    --background-glow: 96 64 40;
+    --app-surface: radial-gradient(
+        circle at 18% 20%,
+        rgba(155, 96, 36, 0.35) 0%,
+        rgba(155, 96, 36, 0) 45%
+      ),
+      radial-gradient(
+        circle at 78% 16%,
+        rgba(210, 132, 54, 0.32) 0%,
+        rgba(210, 132, 54, 0) 42%
+      ),
+      radial-gradient(
+        circle at 48% 82%,
+        rgba(92, 58, 30, 0.4) 0%,
+        rgba(92, 58, 30, 0) 55%
+      ),
+      radial-gradient(
+        circle at 52% 46%,
+        rgba(196, 126, 62, 0.24) 0%,
+        rgba(196, 126, 62, 0.06) 40%,
+        rgba(var(--background-base) / 0.7) 70%,
+        rgba(var(--background-base) / 1) 100%
+      ),
+      linear-gradient(
+        160deg,
+        rgba(26, 18, 13, 0.95) 0%,
+        rgba(28, 20, 14, 0.85) 35%,
+        rgba(35, 24, 16, 0.7) 58%,
+        rgba(var(--background-base) / 0.85) 78%,
+        rgba(var(--background-base) / 1) 100%
+      );
   }
 }
 
+html,
 body {
+  min-height: 100%;
+  min-height: 100vh;
+}
+
+html {
+  background-color: rgb(var(--background-base));
+  overscroll-behavior: none;
+}
+
+body {
+  position: relative;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: transparent;
+  overscroll-behavior: none;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -30vh -20vw;
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--app-surface);
+  background-repeat: no-repeat;
+  background-size: 240% 240%;
+  background-position: center;
+  will-change: transform;
 }
