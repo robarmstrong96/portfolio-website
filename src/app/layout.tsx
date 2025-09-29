@@ -21,11 +21,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.className} flex min-h-screen flex-col`}>
         <Header />
-        <main>
+        <main className="flex-1 pb-20 pt-32">
           <Providers>{children}</Providers>
-        </main> 
+        </main>
         <Footer />
       </body>
     </html>

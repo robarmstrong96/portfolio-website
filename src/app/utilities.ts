@@ -1,8 +1,10 @@
-export const enum SelectedPage {
-  ABOUTME = "About Me",
-  PROJECTS = "Projects",
-  CONTACTINFO = "Contact Info/Links",
-}
+export const SelectedPage = {
+  ABOUTME: "About Me",
+  PROJECTS: "Projects",
+  CONTACTINFO: "Contact Info/Links",
+} as const;
+
+export type SelectedPage = (typeof SelectedPage)[keyof typeof SelectedPage];
 
 /**
  * Defined type 'Route'

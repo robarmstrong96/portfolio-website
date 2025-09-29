@@ -3,10 +3,11 @@ name: Build and Push Docker image
 on:
   push:
     branches:
-      - main  # Triggers the workflow on pushes to the main branch
-  pull_request:
-    branches:
-      - main  # Optionally, trigger the workflow on pull requests to the main branch
+      - main  # Trigger the workflow only when commits land on the main branch
+
+permissions:
+  contents: read
+  packages: write
 
 jobs:
   build:
@@ -31,4 +32,6 @@ jobs:
       with:
         context: .
         push: true
-        tags: ghcr.io/${{ github.repository }}:latest
+        tags: |
+          ghcr.io/${{ github.repository }}:latest
+          ghcr.io/${{ github.repository }}:${{ github.sha }}
