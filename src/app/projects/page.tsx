@@ -9,7 +9,7 @@ export default function Page() {
         <header className="max-w-2xl">
           <h1 className="text-4xl font-semibold text-stone-900 dark:text-amber-100">Projects</h1>
           <p className="mt-4 text-lg leading-relaxed text-stone-700 dark:text-amber-200/80">
-            A curated selection of builds, experiments, and ongoing explorations. Full write-ups are coming soon&mdash;here&apos;s a sneak peek at what&apos;s taking shape.
+            A rotating lineup of builds, prototypes, and experiments. Long-form breakdowns are in the works&mdash;consider this the trailer for what&apos;s on deck.
           </p>
         </header>
 
@@ -20,9 +20,9 @@ export default function Page() {
               <span className="text-sm font-semibold uppercase tracking-wide text-stone-500 dark:text-amber-200/70">In Progress</span>
               <h2 className="text-2xl font-semibold">Interactive Project Showcase</h2>
               <p className="flex-1 text-base leading-relaxed text-stone-600 dark:text-amber-200/80">
-                Building a dynamic gallery to highlight development projects with rich visuals, behind-the-scenes notes, and live demos.
+                Sketching a dynamic home for featured work, complete with quick peeks at the why, how, and what ships next.
               </p>
-              <p className="text-sm font-medium text-amber-700 dark:text-amber-300">Case study launching soon.</p>
+              <p className="text-sm font-medium text-amber-700 dark:text-amber-300">Full tour going live soon.</p>
             </div>
           </article>
 
@@ -32,9 +32,9 @@ export default function Page() {
               <span className="text-sm font-semibold uppercase tracking-wide text-stone-500 dark:text-amber-200/70">Concept</span>
               <h2 className="text-2xl font-semibold">Experiential Audio Tools</h2>
               <p className="flex-1 text-base leading-relaxed text-stone-600 dark:text-amber-200/80">
-                Designing browser-based instruments inspired by modular synthesis, blending real-time audio with expressive UI patterns.
+                Dreaming up playful browser-based instruments that respond to gestures with color, motion, and sound.
               </p>
-              <p className="text-sm font-medium text-amber-700 dark:text-amber-300">Playable prototype in the works.</p>
+              <p className="text-sm font-medium text-amber-700 dark:text-amber-300">First jam session drops soon.</p>
             </div>
           </article>
         </div>
@@ -44,10 +44,10 @@ export default function Page() {
           <div className="relative flex flex-col gap-4 text-stone-800 dark:text-amber-100">
             <h2 className="text-2xl font-semibold">What&apos;s next</h2>
             <p className="text-base leading-relaxed text-stone-600 dark:text-amber-200/80">
-              I&apos;m refining this space to feature process notes, interactive prototypes, and shipping-ready apps. Expect deeper dives into design systems, performance tooling, and creative coding experiments.
+              Tuning this corner to share process notes, interactive prototypes, and the occasional aha moment. Expect clear takeaways, curious experiments, and plenty of polish as things evolve.
             </p>
             <p className="text-sm text-stone-500 dark:text-amber-200/70">
-              Have a project in mind? Let&apos;s collaborate&mdash;reach out through the contact links below.
+              Have a project in mind? Say hi through the contact links below.
             </p>
           </div>
         </div>
