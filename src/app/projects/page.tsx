@@ -7,139 +7,138 @@ import { ChevronDownIcon } from '@heroicons/react/24/outline';
 const projects = [
   {
     id: 'showcase',
-    status: 'Design exploration',
+    status: 'Planning stage',
     title: 'Project showcase',
     summary:
-      'Designing an interactive portfolio hub that can tell the story behind each build with motion, copy, and technical context.',
+      'A simple example of how a case study might open once there is real work to highlight.',
     focus:
-      'Building a narrative-first presentation for code, hardware, and research projects that can flex to fit deep dives.',
-    tags: ['Next.js', 'Tailwind', 'Storytelling', 'Design systems'],
+      'This placeholder copy shows where a future project story could explain goals, tools, and lessons learned.',
+    tags: ['Placeholder', 'Concept', 'Layout'],
     metrics: [
-      { value: '3', label: 'Narrative templates' },
-      { value: '12', label: 'Reusable UI tokens' },
+      { value: 'TBD', label: 'Launch target' },
+      { value: '0', label: 'Assets gathered' },
     ],
     milestones: [
       {
-        label: 'Currently iterating',
-        description:
-          'Prototyping responsive layouts that can carry long-form writeups, diagrams, and media galleries without feeling cramped.',
+        label: 'Next step',
+        description: 'Replace this note with actual milestones once the project is underway.',
       },
       {
-        label: 'Up next',
-        description: 'Build MDX-powered content pipeline for versioned case studies and changelogs.',
+        label: 'Reminder',
+        description: 'Add screenshots, links, and a short summary when there is something to announce.',
       },
     ],
     sections: [
       {
-        heading: 'Why it exists',
+        heading: 'What to include later',
         body: [
-          'I wanted a dedicated space to talk through the messy parts of side projects—the trade-offs, tooling decisions, and iterations that rarely make it into a quick screenshot thread.',
-          'The goal is to create a living archive that can expand or contract based on how deep I want to go for each project.',
+          'Think about a quick overview of the problem you solved, the tools you used, and what made the project interesting.',
+          'Drop in a paragraph or two with the kind of story you would share with a friend curious about the build.',
         ],
       },
       {
-        heading: 'Prototype features',
+        heading: 'Nice-to-have details',
         body: [
-          'Modular content blocks for timelines, architecture callouts, and “what I would do differently” reflections.',
-          'Light/dark themes tuned for legibility of code snippets, schematics, and photography.',
+          'Consider a timeline, a list of takeaways, or a short “what I would try next” section when you have more context.',
+          'Until then, keep the copy lightweight so the layout still feels balanced.',
         ],
       },
     ],
   },
   {
     id: 'homelab',
-    status: 'Active build',
+    status: 'Work in progress',
     title: 'Containerization & Homelab',
     summary:
-      'Running a fleet of self-hosted services (media, monitoring, home automation) on a small rack with container orchestration.',
+      'Imagine this card opening up to show a favorite hardware build, a lab diagram, or a few lessons from tinkering.',
     focus:
-      'Keeping services resilient while experimenting with new infrastructure tooling—without waking up to a broken network.',
-    tags: ['Proxmox', 'Docker', 'Traefik', 'ZFS', 'Grafana'],
+      'Use this area to explain why the project matters, what you are experimenting with, or how you keep things running.',
+    tags: ['Placeholder', 'Self-hosting', 'Lab idea'],
     metrics: [
-      { value: '14', label: 'Services deployed' },
-      { value: '99.5%', label: 'Uptime goal' },
-      { value: '4 TB', label: 'Redundant storage' },
+      { value: '—', label: 'Services planned' },
+      { value: '—', label: 'Tools to mention' },
+      { value: '—', label: 'Fun stat' },
     ],
     milestones: [
       {
-        label: 'Current focus',
-        description: 'Rolling out observability stack (Loki + Prometheus) with alerting routed through ntfy and Matrix.',
+        label: 'Draft notes',
+        description: 'Swap in a few bullet points about recent upgrades or the next piece of gear you want to test.',
       },
       {
-        label: 'Recently shipped',
-        description: 'Automated nightly ZFS snapshots replicated to cold storage with health reports in Home Assistant.',
+        label: 'Add visuals',
+        description: 'Drop a photo of the setup or a quick diagram when you have one handy.',
       },
       {
-        label: 'Stretch goal',
-        description: 'Experiment with k3s on top of Proxmox for higher-level scheduling without losing bare-metal control.',
+        label: 'Share results',
+        description: 'Write a short recap of what worked, what broke, and what you learned along the way.',
       },
     ],
     sections: [
       {
-        heading: 'Rack layout',
+        heading: 'What to describe',
         body: [
-          'A compact 12U rack holds the Proxmox host, a managed PoE switch, router, and a Raspberry Pi cluster used for lightweight services and failover DNS.',
-          'Cable management is intentionally exposed so tweaks are painless during weekend experiments.',
+          'Give a quick rundown of the gear, software, or approach once there is something concrete to show.',
+          'Short sentences are perfect here until you have a full story to tell.',
         ],
       },
       {
-        heading: 'Service design',
+        heading: 'Potential highlights',
         body: [
-          'Containers are orchestrated with Docker Compose stacks grouped by purpose: networking edge, media, observability, and automation.',
-          'Secrets and config drift are tracked in a private Git repository with templated overrides for lab vs. travel hardware.',
+          'Call out the most interesting parts of the build, like automation wins or clever hardware choices.',
+          'Mention any tools or workflows you want to remember for the real writeup.',
         ],
       },
       {
-        heading: 'Resilience checklist',
+        heading: 'Follow-up ideas',
         body: [
-          'Out-of-band access through Tailscale and a dedicated management VLAN.',
-          'UPS-backed core gear with graceful shutdown scripting and test drills every quarter.',
-          'Instant app redeploys using infrastructure-as-code blueprints checked into version control.',
+          'List questions you still want to explore or upgrades you plan to try.',
+          'Keep it casual—this space is just a reminder of what to cover later.',
+          'If the list gets long, turn the best items into milestones above.',
         ],
       },
     ],
     image: {
       src: '/projects/homelab-rack.svg',
       alt: 'Stylized illustration of a homelab rack with networking gear, servers, and status LEDs.',
-      caption: 'A quick sketch of the current rack layout used for self-hosted services.',
+      caption: 'A placeholder illustration showing where a future project photo or diagram could live.',
     },
   },
   {
     id: 'field-notes',
-    status: 'Research log',
+    status: 'Idea board',
     title: 'Field notes & instrumentation',
     summary:
-      'Capturing environmental sensor data and studio experiments in a single knowledge base with fast querying.',
+      'Here is space for a future research log, a data experiment, or any project that deserves a longer explanation.',
     focus:
-      'Marrying analog field notes with structured data so I can compare experiments months later without digging through notebooks.',
-    tags: ['TypeScript', 'SQLite', 'Sensors', 'Data viz'],
+      'Use the focus area to outline the goal of the project and what kind of story you hope to share later.',
+    tags: ['Placeholder', 'Research', 'Notes'],
     metrics: [
-      { value: '8', label: 'Active sensor nodes' },
-      { value: '45k+', label: 'Data points indexed' },
+      { value: 'TBD', label: 'Data collected' },
+      { value: 'TBD', label: 'Experiments logged' },
     ],
     milestones: [
       {
-        label: 'In progress',
-        description: 'Building a synchronization workflow that merges offline tablet notes with structured experiment data.',
+        label: 'Collect ideas',
+        description: 'Jot down topics, links, or sketches you plan to turn into a real writeup.',
       },
       {
-        label: 'Exploring',
-        description: 'Testing generative summaries that surface trends across experiments without losing raw context.',
+        label: 'Plan the story',
+        description: 'When you are ready, outline the sections you want to cover and add them below.',
       },
     ],
     sections: [
       {
-        heading: 'Capture workflow',
+        heading: 'Section prompts',
         body: [
-          'A custom mobile UI logs quick observations, while a lightweight API ingests sensor readings from ESPHome devices scattered around the apartment.',
-          'Handwritten notes are scanned with an iPad shortcut and pushed into the same timeline with automatic tagging.',
+          'Use this spot to remind yourself what kind of narrative would be useful, like a quick setup overview or the main challenge.',
+          'Keep the tone casual until you have a full draft—this is just scaffolding.',
         ],
       },
       {
-        heading: 'Analysis tooling',
+        heading: 'Future additions',
         body: [
-          'Charts are generated with a D3 + React stack tuned for readability in both light and dark mode, with annotations tied back to the original note.',
-          'Long-term retention happens in SQLite with periodic archiving to Parquet for heavier querying.',
+          'Maybe you will embed charts, screenshots, or a short video walkthrough once the project is real.',
+          'For now, note anything you do not want to forget when it is time to write.',
         ],
       },
     ],
@@ -311,10 +310,10 @@ export default function Page() {
           <div className="relative flex flex-col gap-4 text-stone-800 dark:text-amber-100">
             <h2 className="text-2xl font-semibold">What’s next</h2>
             <p className="text-base leading-relaxed text-stone-600 dark:text-amber-200/80">
-              The backlog is full of hardware teardowns, long-form writeups, and tiny experiments that need a home. Expect this page to keep evolving as I iterate on the storytelling layer and ship more lab upgrades.
+              Use this section as a friendly reminder that more projects are on the way. When the backlog is ready, swap this placeholder copy with real updates or a quick roadmap.
             </p>
             <p className="text-sm text-stone-500 dark:text-amber-200/70">
-              Have a suggestion or want a closer look at something here? Reach out—this space is built to grow with feedback.
+              For now, it simply nudges visitors (and future you) that the page is still taking shape.
             </p>
           </div>
         </div>
