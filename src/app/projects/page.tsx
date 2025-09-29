@@ -165,7 +165,7 @@ export default function Page() {
           </p>
         </header>
 
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8">
           {projects.map((project) => {
             const isExpanded = expandedId === project.id;
 
@@ -173,7 +173,9 @@ export default function Page() {
               <article
                 key={project.id}
                 className={`group relative flex h-full flex-col overflow-hidden rounded-3xl border border-amber-200/60 bg-amber-50/80 p-8 shadow-xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:border-stone-700/60 dark:bg-stone-950/70 ${
-                  isExpanded ? 'ring-2 ring-amber-300/60 dark:ring-amber-400/60' : ''
+                  isExpanded
+                    ? 'ring-2 ring-amber-300/60 lg:p-12 xl:p-14 dark:ring-amber-400/60'
+                    : ''
                 }`}
               >
                 <button
@@ -220,7 +222,7 @@ export default function Page() {
                   }`}
                   aria-hidden={!isExpanded}
                 >
-                  <div className="mt-6 flex flex-col gap-6 overflow-hidden text-stone-700 dark:text-amber-200/80">
+                  <div className={`mt-6 flex flex-col gap-6 overflow-hidden text-stone-700 dark:text-amber-200/80 ${isExpanded ? 'lg:gap-8' : ''}`}>
                     {project.image ? (
                       <figure className="relative overflow-hidden rounded-2xl border border-amber-200/60 bg-white/60 shadow-inner dark:border-stone-700/60 dark:bg-stone-900/60">
                         <Image
@@ -241,8 +243,12 @@ export default function Page() {
                     <p className="text-sm uppercase tracking-wide text-amber-700/80 dark:text-amber-300/80">Focus</p>
                     <p className="text-base leading-relaxed">{project.focus}</p>
 
-                    <div className="grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
-                      <div className="space-y-6">
+                    <div
+                      className={`flex flex-col gap-6 ${
+                        isExpanded ? 'xl:flex-row xl:items-start xl:gap-10' : ''
+                      }`}
+                    >
+                      <div className={`space-y-6 ${isExpanded ? 'xl:flex-1' : ''}`}>
                         {project.sections.map((section) => (
                           <section key={section.heading} className="space-y-3">
                             <h3 className="text-lg font-semibold text-stone-900 dark:text-amber-100">{section.heading}</h3>
@@ -255,7 +261,11 @@ export default function Page() {
                         ))}
                       </div>
 
-                      <aside className="flex flex-col gap-6 rounded-2xl border border-amber-200/70 bg-white/70 p-5 shadow-inner dark:border-stone-700/70 dark:bg-stone-900/70">
+                      <aside
+                        className={`flex flex-col gap-6 rounded-2xl border border-amber-200/70 bg-white/70 p-5 shadow-inner dark:border-stone-700/70 dark:bg-stone-900/70 ${
+                          isExpanded ? 'xl:max-w-sm xl:flex-none' : ''
+                        }`}
+                      >
                         <div className="space-y-3">
                           <h3 className="text-sm font-semibold uppercase tracking-wide text-amber-700 dark:text-amber-300">
                             Snapshot metrics
