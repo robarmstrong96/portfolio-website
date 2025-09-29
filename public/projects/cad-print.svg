@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Abstract 3D printer illustration</title>
+  <desc id="desc">Line art of a 3D printer frame with a print in progress.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff5e6" />
+      <stop offset="100%" stop-color="#fde6c8" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg)" rx="24" ry="24" />
+  <g fill="none" stroke="#f97316" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+    <rect x="120" y="60" width="400" height="240" rx="24" ry="24" />
+    <rect x="180" y="120" width="280" height="160" rx="18" ry="18" />
+    <line x1="320" y1="60" x2="320" y2="24" />
+    <polyline points="200,120 200,90 440,90 440,120" />
+    <polyline points="220,280 220,300 420,300 420,280" />
+  </g>
+  <g fill="none" stroke="url(#accent)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M280 140h80l12 72-52 36-52-36z" />
+    <path d="M312 248v36" />
+    <path d="M328 248v36" />
+  </g>
+  <g fill="none" stroke="#fb923c" stroke-width="6" stroke-linecap="round" opacity="0.6">
+    <path d="M160 192h-24" />
+    <path d="M160 224h-24" />
+    <path d="M504 192h24" />
+    <path d="M504 224h24" />
+    <path d="M280 90V60" />
+    <path d="M360 90V60" />
+  </g>
+</svg>
