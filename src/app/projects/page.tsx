@@ -10,9 +10,9 @@ const projects = [
     status: 'Planning stage',
     title: 'Project showcase',
     summary:
-      'A simple example of how a case study might open once there is real work to highlight.',
+      'This is a placeholder for where I’ll eventually highlight a real project. Think of it as scaffolding until something worth showing lands here.',
     focus:
-      'This placeholder copy shows where a future project story could explain goals, tools, and lessons learned.',
+      'Once there’s something concrete, this slot will explain the build, the stack, and anything interesting I figured out along the way.',
     tags: ['Placeholder', 'Concept', 'Layout'],
     metrics: [
       { value: 'TBD', label: 'Launch target' },
@@ -21,26 +21,26 @@ const projects = [
     milestones: [
       {
         label: 'Next step',
-        description: 'Replace this note with actual milestones once the project is underway.',
+        description: 'Replace this text with real milestones once a project takes shape.',
       },
       {
         label: 'Reminder',
-        description: 'Add screenshots, links, and a short summary when there is something to announce.',
+        description: 'Add screenshots, links, or notes when there’s something worth sharing.',
       },
     ],
     sections: [
       {
-        heading: 'What to include later',
+        heading: 'What will go here',
         body: [
-          'Think about a quick overview of the problem you solved, the tools you used, and what made the project interesting.',
-          'Drop in a paragraph or two with the kind of story you would share with a friend curious about the build.',
+          'A quick rundown of what the project was, the tools I used, and why it was fun or painful.',
+          'Basically the sort of summary I’d give a friend who asked what I was building.',
         ],
       },
       {
-        heading: 'Nice-to-have details',
+        heading: 'Extras I might add',
         body: [
-          'Consider a timeline, a list of takeaways, or a short “what I would try next” section when you have more context.',
-          'Until then, keep the copy lightweight so the layout still feels balanced.',
+          'Timelines, takeaways, or follow-up ideas once there’s actually something to show.',
+          'Until then, this space stays light so the layout doesn’t feel empty.',
         ],
       },
     ],
@@ -50,98 +50,113 @@ const projects = [
     status: 'Work in progress',
     title: 'Containerization & Homelab',
     summary:
-      'Imagine this card opening up to show a favorite hardware build, a lab diagram, or a few lessons from tinkering.',
+      'Notes on testing containerized services and trying to keep a homelab ecosystem from catching fire.',
     focus:
-      'Use this area to explain why the project matters, what you are experimenting with, or how you keep things running.',
-    tags: ['Placeholder', 'Self-hosting', 'Lab idea'],
+      'Right now this is where I break and rebuild things: experimenting with orchestration, network setups, and self-hosted services.',
+    tags: ['Self-hosting', 'Containers', 'Lab'],
     metrics: [
-      { value: '—', label: 'Services planned' },
-      { value: '—', label: 'Tools to mention' },
-      { value: '—', label: 'Fun stat' },
+      { value: '—', label: 'Services running' },
+      { value: '—', label: 'Containers tested' },
+      { value: '—', label: 'Configs rewritten' },
     ],
     milestones: [
       {
         label: 'Draft notes',
-        description: 'Swap in a few bullet points about recent upgrades or the next piece of gear you want to test.',
+        description: 'Log some of the recent upgrades and mistakes I made along the way.',
       },
       {
         label: 'Add visuals',
-        description: 'Drop a photo of the setup or a quick diagram when you have one handy.',
+        description: 'Drop in a diagram or photo of the rack when I get around to it.',
       },
       {
-        label: 'Share results',
-        description: 'Write a short recap of what worked, what broke, and what you learned along the way.',
+        label: 'Recap',
+        description: 'Write up what worked, what failed, and what I’d do differently next time.',
       },
     ],
     sections: [
       {
-        heading: 'What to describe',
+        heading: 'Setup',
         body: [
-          'Give a quick rundown of the gear, software, or approach once there is something concrete to show.',
-          'Short sentences are perfect here until you have a full story to tell.',
+          'A quick outline of the gear and software stack I’m experimenting with.',
+          'Kept short until I feel like writing a proper walkthrough.',
         ],
       },
       {
-        heading: 'Potential highlights',
+        heading: 'Highlights',
         body: [
-          'Call out the most interesting parts of the build, like automation wins or clever hardware choices.',
-          'Mention any tools or workflows you want to remember for the real writeup.',
+          'Automation wins, dumb hacks that worked, or anything else worth remembering.',
+          'Basically the bits I don’t want to forget when I circle back for a full writeup.',
         ],
       },
       {
-        heading: 'Follow-up ideas',
+        heading: 'Next steps',
         body: [
-          'List questions you still want to explore or upgrades you plan to try.',
-          'Keep it casual—this space is just a reminder of what to cover later.',
-          'If the list gets long, turn the best items into milestones above.',
+          'Future tweaks, services to try, or upgrades on the list.',
+          'This space doubles as my own scratchpad for ideas.',
         ],
       },
     ],
     image: {
       src: '/projects/homelab-rack.svg',
       alt: 'Stylized illustration of a homelab rack with networking gear, servers, and status LEDs.',
-      caption: 'A placeholder illustration showing where a future project photo or diagram could live.',
+      caption: 'Placeholder illustration until I add a real photo or diagram of the setup.',
     },
   },
   {
-    id: 'field-notes',
-    status: 'Idea board',
-    title: 'Field notes & instrumentation',
+    id: 'cad-printing',
+    status: 'Active',
+    title: 'CAD & 3D Printing',
     summary:
-      'Here is space for a future research log, a data experiment, or any project that deserves a longer explanation.',
+      'Designing parts in CAD and printing them to see what holds up in the real world.',
     focus:
-      'Use the focus area to outline the goal of the project and what kind of story you hope to share later.',
-    tags: ['Placeholder', 'Research', 'Notes'],
+      'Most of these are small runs: brackets, mounts, car parts, or random fixes that seemed worth testing.',
+    tags: ['CAD', '3D Printing', 'Prototyping'],
     metrics: [
-      { value: 'TBD', label: 'Data collected' },
-      { value: 'TBD', label: 'Experiments logged' },
+      { value: '—', label: 'Designs drafted' },
+      { value: '—', label: 'Prints completed' },
+      { value: '—', label: 'Revisions made' },
     ],
     milestones: [
       {
-        label: 'Collect ideas',
-        description: 'Jot down topics, links, or sketches you plan to turn into a real writeup.',
+        label: 'Log designs',
+        description: 'Drop in models and notes on what worked or failed.',
       },
       {
-        label: 'Plan the story',
-        description: 'When you are ready, outline the sections you want to cover and add them below.',
+        label: 'Photos',
+        description: 'Add pictures of finished prints once I’ve got them cleaned up.',
+      },
+      {
+        label: 'Refinements',
+        description: 'Track iterations on the designs until they’re solid.',
       },
     ],
     sections: [
       {
-        heading: 'Section prompts',
+        heading: 'Design process',
         body: [
-          'Use this spot to remind yourself what kind of narrative would be useful, like a quick setup overview or the main challenge.',
-          'Keep the tone casual until you have a full draft—this is just scaffolding.',
+          'Quick sketches, CAD mockups, and how they translated into prints.',
+          'Kept informal since most of these are trial-and-error builds.',
         ],
       },
       {
-        heading: 'Future additions',
+        heading: 'Print results',
         body: [
-          'Maybe you will embed charts, screenshots, or a short video walkthrough once the project is real.',
-          'For now, note anything you do not want to forget when it is time to write.',
+          'What held up, what warped, and what immediately snapped.',
+          'Notes on material choices and print settings worth keeping.',
+        ],
+      },
+      {
+        heading: 'Next designs',
+        body: [
+          'Ideas on deck for the printer: car mods, case parts, and maybe some just-for-fun builds.',
         ],
       },
     ],
+    image: {
+      src: '/projects/cad-print.svg',
+      alt: 'Stylized line drawing of a 3D printer with a part in progress.',
+      caption: 'Placeholder illustration until I add real print photos.',
+    },
   },
 ] as const;
 
@@ -160,7 +175,7 @@ export default function Page() {
         <header className="max-w-2xl">
           <h1 className="text-4xl font-semibold text-stone-900 dark:text-amber-100">Projects</h1>
           <p className="mt-4 text-lg leading-relaxed text-stone-700 dark:text-amber-200/80">
-            An expandable gallery of builds, experiments, and research logs. Each card opens into a deep dive so the details are only one click away.
+            A mix of builds, experiments, and half-finished ideas. Each card expands so I can dump notes, track progress, or eventually turn it into a proper writeup.
           </p>
         </header>
 
@@ -310,10 +325,10 @@ export default function Page() {
           <div className="relative flex flex-col gap-4 text-stone-800 dark:text-amber-100">
             <h2 className="text-2xl font-semibold">What’s next</h2>
             <p className="text-base leading-relaxed text-stone-600 dark:text-amber-200/80">
-              Use this section as a friendly reminder that more projects are on the way. When the backlog is ready, swap this placeholder copy with real updates or a quick roadmap.
+              More projects will end up here once I’ve actually finished them. Until then, this is just a reminder that the page is still growing.
             </p>
             <p className="text-sm text-stone-500 dark:text-amber-200/70">
-              For now, it simply nudges visitors (and future you) that the page is still taking shape.
+              I’ll update it whenever something feels worth documenting.
             </p>
           </div>
         </div>
