@@ -13,24 +13,26 @@ function CenterSection() {
 
       <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 pt-16 pb-32 sm:px-10 lg:px-16">
         <section className="grid gap-10 rounded-3xl border border-amber-200/60 bg-amber-50/80 p-10 shadow-2xl backdrop-blur-xl transition-colors dark:border-stone-700/60 dark:bg-stone-900/70 dark:shadow-black/30 max-lg:p-8 lg:grid-cols-[1.1fr,0.9fr]">
-          <div className="flex flex-col gap-6 text-stone-900 dark:text-amber-100">
-            <div className="flex flex-wrap items-center gap-3 text-stone-600 dark:text-amber-200/80">
-              <span className="rounded-full bg-amber-200 px-3 py-1 text-sm font-semibold text-amber-800 dark:bg-amber-900/50 dark:text-amber-200">
-                Full-Stack Engineer
-              </span>
-              <span className="rounded-full bg-orange-200 px-3 py-1 text-sm font-semibold text-orange-800 dark:bg-orange-900/50 dark:text-orange-200">
-                Tinkerer &amp; Music Enthusiast
-              </span>
+          <div className="flex flex-col gap-6 text-stone-900 dark:text-amber-100 lg:h-full">
+            <div className="flex flex-col gap-6">
+              <div className="flex flex-wrap items-center gap-3 text-stone-600 dark:text-amber-200/80">
+                <span className="rounded-full bg-amber-200 px-3 py-1 text-sm font-semibold text-amber-800 dark:bg-amber-900/50 dark:text-amber-200">
+                  Full-Stack Engineer
+                </span>
+                <span className="rounded-full bg-orange-200 px-3 py-1 text-sm font-semibold text-orange-800 dark:bg-orange-900/50 dark:text-orange-200">
+                  Tinkerer &amp; Music Enthusiast
+                </span>
+              </div>
+              <h1 className="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+                Hi, I’m Kyle.
+              </h1>
+              <p className="text-lg leading-relaxed text-stone-700 dark:text-amber-200/80">
+                I’m a full-stack engineer from Newport News, Virginia. I spend my time writing code,
+                building small form-factor PCs, designing parts in CAD, 3D printing, running a homelab,
+                and making electronic music.
+              </p>
             </div>
-            <h1 className="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-              Hi, I’m Kyle.
-            </h1>
-            <p className="text-lg leading-relaxed text-stone-700 dark:text-amber-200/80">
-              I’m a full-stack engineer from Newport News, Virginia. I spend my time writing code, 
-              building small form-factor PCs, designing parts in CAD, 3D printing, running a homelab, 
-              and making electronic music.
-            </p>
-            <div className="grid gap-6 sm:grid-cols-2">
+            <div className="grid gap-6 sm:grid-cols-2 lg:mt-auto lg:pt-4">
               <InfoCard
                 title="Building things"
                 description="Hardware projects, CAD designs, and 3D prints."
