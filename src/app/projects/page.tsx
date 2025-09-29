@@ -4,6 +4,25 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 
+type ProjectImage = {
+  src: string;
+  alt: string;
+  caption?: string;
+};
+
+type Project = {
+  id: string;
+  status: string;
+  title: string;
+  summary: string;
+  focus: string;
+  tags: readonly string[];
+  metrics: readonly { value: string; label: string }[];
+  milestones: readonly { label: string; description: string }[];
+  sections: readonly { heading: string; body: readonly string[] }[];
+  image?: ProjectImage;
+};
+
 const projects = [
   {
     id: 'showcase',
@@ -158,9 +177,7 @@ const projects = [
       caption: 'Placeholder illustration until I add real print photos.',
     },
   },
-] as const;
-
-type Project = (typeof projects)[number];
+] satisfies readonly Project[];
 
 export default function Page() {
   const [expandedId, setExpandedId] = useState<string | null>(projects[0]?.id ?? null);
