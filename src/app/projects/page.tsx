@@ -194,7 +194,7 @@ export default function Page() {
         <header className="max-w-3xl">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-300/60 bg-amber-100/70 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-amber-800 dark:border-amber-500/40 dark:bg-amber-500/10 dark:text-amber-200">
             <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-amber-500/90" aria-hidden />
-            Scaffolding preview — content intentionally light
+            Scaffolding preview, content intentionally light
           </div>
           <h1 className="text-4xl font-semibold text-stone-900 dark:text-amber-100">Projects</h1>
           <p className="mt-4 text-lg leading-relaxed text-stone-700 dark:text-amber-200/80">
@@ -246,7 +246,7 @@ export default function Page() {
                         key={tag}
                         className={`rounded-full px-3 py-1 text-xs font-medium transition selection:bg-amber-300 selection:text-stone-900 group-hover:bg-amber-200 dark:selection:bg-amber-500 dark:selection:text-stone-950 ${
                           isExpanded
-                            ? 'bg-amber-300 text-stone-950 shadow-sm ring-1 ring-amber-400/70 dark:bg-stone-700 dark:text-amber-100 dark:ring-amber-300/60'
+                            ? 'bg-amber-600 text-amber-50 shadow-sm ring-1 ring-amber-900/60 dark:bg-amber-400/90 dark:text-stone-950 dark:ring-amber-200/60'
                             : 'bg-amber-200/80 text-amber-800 dark:bg-stone-800/70 dark:text-amber-200'
                         }`}
                       >
@@ -337,7 +337,7 @@ export default function Page() {
                                 <p
                                   className={`text-xs font-semibold uppercase tracking-wide transition ${
                                     isExpanded
-                                      ? 'text-amber-900 dark:text-amber-100'
+                                      ? 'text-amber-950 dark:text-amber-100'
                                       : 'text-amber-700/80 dark:text-amber-200/80'
                                   }`}
                                 >
@@ -346,7 +346,7 @@ export default function Page() {
                                 <p
                                   className={`mt-1 text-sm leading-relaxed transition ${
                                     isExpanded
-                                      ? 'text-stone-900 dark:text-amber-100'
+                                      ? 'text-stone-950 dark:text-amber-100'
                                       : 'text-stone-700 dark:text-amber-200/80'
                                   }`}
                                 >
