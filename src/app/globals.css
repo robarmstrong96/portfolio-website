@@ -113,15 +113,30 @@ body::before {
   will-change: transform;
 }
 
-.skeleton-avatar {
+.skeleton-avatar,
+.skeleton-panel {
   position: absolute;
   inset: 0;
   border-radius: inherit;
   overflow: hidden;
   background-color: rgb(var(--skeleton-base));
+  pointer-events: none;
 }
 
-.skeleton-avatar::after {
+.skeleton-panel {
+  background-color: rgba(var(--skeleton-base) / 0.85);
+}
+
+.skeleton-panel--warm {
+  background-image: linear-gradient(
+    135deg,
+    rgba(255 202 138 / 0.55),
+    rgba(255 245 224 / 0.55)
+  );
+}
+
+.skeleton-avatar::after,
+.skeleton-panel::after {
   content: "";
   position: absolute;
   inset: 0;
