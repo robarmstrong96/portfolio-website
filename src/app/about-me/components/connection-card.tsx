@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { SkeletonOverlay, useSkeletonReveal } from "./skeleton-reveal";
 
 export type ConnectionCardProps = {
   title: string;
@@ -10,13 +10,7 @@ export type ConnectionCardProps = {
 
 export function ConnectionCard({ title, description, href }: ConnectionCardProps) {
   const isExternalLink = href.startsWith("http");
-  const [isReady, setIsReady] = useState(false);
-
-  useEffect(() => {
-    const timer = window.setTimeout(() => setIsReady(true), 280);
-
-    return () => window.clearTimeout(timer);
-  }, []);
+  const isReady = useSkeletonReveal(280);
 
   return (
     <a
@@ -25,15 +19,7 @@ export function ConnectionCard({ title, description, href }: ConnectionCardProps
       target={isExternalLink ? "_blank" : undefined}
       rel={isExternalLink ? "noopener noreferrer" : undefined}
     >
-      <div
-        aria-hidden
-        className="skeleton-panel skeleton-panel--warm absolute inset-0 z-10"
-        style={{
-          opacity: isReady ? 0 : 1,
-          visibility: isReady ? "hidden" : "visible",
-          transition: "opacity 0.45s ease, visibility 0.45s ease",
-        }}
-      />
+      <SkeletonOverlay isReady={isReady} variant="warm" />
       <div className="flex items-center justify-between">
         <h4
           className={`relative z-20 text-lg font-semibold text-stone-900 transition-all duration-500 dark:text-amber-100 ${
