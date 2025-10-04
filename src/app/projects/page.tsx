@@ -4,6 +4,14 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 
+/**
+ * NOTE TO FUTURE-ME / READERS
+ * This page is a "Scaffolding Preview" — a working mock of the layout, copy tone,
+ * and interactions for the eventual Projects page. Content is intentionally light,
+ * numbers are placeholders, and the goal is to set expectations low: this is a
+ * frame, not the finished painting. 🙂
+ */
+
 type ProjectImage = {
   src: string;
   alt: string;
@@ -26,12 +34,12 @@ type Project = {
 const projects = [
   {
     id: 'showcase',
-    status: 'Planning stage',
-    title: 'Project showcase',
+    status: 'Scaffolding',
+    title: 'Project showcase (placeholder)',
     summary:
-      'This is a placeholder for where I’ll eventually highlight a real project. Think of it as scaffolding until something worth showing lands here.',
+      "You're looking at the *shell* for a future write‑up. This exists so you can see how entries will look and expand. Real content will land here once it exists.",
     focus:
-      'Once there’s something concrete, this slot will explain the build, the stack, and anything interesting I figured out along the way.',
+      'When there is an actual project, this block will explain the build, stack, and interesting problems solved — for now, it just proves the layout.',
     tags: ['Placeholder', 'Concept', 'Layout'],
     metrics: [
       { value: 'TBD', label: 'Launch target' },
@@ -40,11 +48,13 @@ const projects = [
     milestones: [
       {
         label: 'Next step',
-        description: 'Replace this text with real milestones once a project takes shape.',
+        description:
+          'Swap these placeholder lines with real milestones once a project takes shape.',
       },
       {
         label: 'Reminder',
-        description: 'Add screenshots, links, or notes when there’s something worth sharing.',
+        description:
+          'Add screenshots, links, or notes when there’s actually something worth sharing.',
       },
     ],
     sections: [
@@ -67,11 +77,11 @@ const projects = [
   {
     id: 'homelab',
     status: 'Work in progress',
-    title: 'Containerization & Homelab',
+    title: 'Containerization & Homelab (preview)',
     summary:
-      'Notes on testing containerized services and trying to keep a homelab ecosystem from catching fire.',
+      'A proving ground for the page structure: cards expand, sections stack, and the sidebar shows metrics — all with mock values.',
     focus:
-      'Right now this is where I break and rebuild things: experimenting with orchestration, network setups, and self-hosted services.',
+      'This is where I break and rebuild things: orchestration experiments, network setups, and self‑hosted services. The write‑up comes later; the frame is here now.',
     tags: ['Self-hosting', 'Containers', 'Lab'],
     metrics: [
       { value: '—', label: 'Services running' },
@@ -81,15 +91,15 @@ const projects = [
     milestones: [
       {
         label: 'Draft notes',
-        description: 'Log some of the recent upgrades and mistakes I made along the way.',
+        description: 'Log recent upgrades and mishaps once I clean them up for public consumption.',
       },
       {
         label: 'Add visuals',
-        description: 'Drop in a diagram or photo of the rack when I get around to it.',
+        description: 'Drop in a diagram or rack photo when I have one I like.',
       },
       {
         label: 'Recap',
-        description: 'Write up what worked, what failed, and what I’d do differently next time.',
+        description: 'What worked, what failed, and what I’d do differently next time.',
       },
     ],
     sections: [
@@ -103,15 +113,15 @@ const projects = [
       {
         heading: 'Highlights',
         body: [
-          'Automation wins, dumb hacks that worked, or anything else worth remembering.',
-          'Basically the bits I don’t want to forget when I circle back for a full writeup.',
+          'Automation wins, dumb hacks that worked, and anything else worth remembering.',
+          'The parts Future Me will forget unless I pin them here.',
         ],
       },
       {
         heading: 'Next steps',
         body: [
-          'Future tweaks, services to try, or upgrades on the list.',
-          'This space doubles as my own scratchpad for ideas.',
+          'Future tweaks, services to try, and upgrades on the list.',
+          'This doubles as a scratchpad until a full article exists.',
         ],
       },
     ],
@@ -123,12 +133,12 @@ const projects = [
   },
   {
     id: 'cad-printing',
-    status: 'Active',
-    title: 'CAD & 3D Printing',
+    status: 'Work in progress',
+    title: 'CAD & 3D Printing (preview)',
     summary:
-      'Designing parts in CAD and printing them to see what holds up in the real world.',
+      'Designing parts in CAD and printing them to see what holds up in the real world — real galleries will replace this text later.',
     focus:
-      'Most of these are small runs: brackets, mounts, car parts, or random fixes that seemed worth testing.',
+      'Mostly small runs: brackets, mounts, car bits, and opportunistic fixes. This is a preview slot so the layout isn’t empty.',
     tags: ['CAD', '3D Printing', 'Prototyping'],
     metrics: [
       { value: '—', label: 'Designs drafted' },
@@ -136,38 +146,29 @@ const projects = [
       { value: '—', label: 'Revisions made' },
     ],
     milestones: [
-      {
-        label: 'Log designs',
-        description: 'Drop in models and notes on what worked or failed.',
-      },
-      {
-        label: 'Photos',
-        description: 'Add pictures of finished prints once I’ve got them cleaned up.',
-      },
-      {
-        label: 'Refinements',
-        description: 'Track iterations on the designs until they’re solid.',
-      },
+      { label: 'Log designs', description: 'Drop models and quick notes on what worked or failed.' },
+      { label: 'Photos', description: 'Add pictures of finished prints once I’ve got them cleaned up.' },
+      { label: 'Refinements', description: 'Track iterations until parts are reliable.' },
     ],
     sections: [
       {
         heading: 'Design process',
         body: [
           'Quick sketches, CAD mockups, and how they translated into prints.',
-          'Kept informal since most of these are trial-and-error builds.',
+          'Informal notes — most of these are trial‑and‑error builds.',
         ],
       },
       {
         heading: 'Print results',
         body: [
           'What held up, what warped, and what immediately snapped.',
-          'Notes on material choices and print settings worth keeping.',
+          'Material choices and print settings worth keeping.',
         ],
       },
       {
         heading: 'Next designs',
         body: [
-          'Ideas on deck for the printer: car mods, case parts, and maybe some just-for-fun builds.',
+          'Ideas on deck for the printer: car mods, case parts, and some just‑for‑fun builds.',
         ],
       },
     ],
@@ -184,15 +185,22 @@ export default function Page() {
 
   return (
     <section className="relative isolate min-h-[calc(100vh-8rem)] overflow-hidden bg-gradient-to-br from-[#fff3e1] via-[#fde4c2] to-[#fef6ea] py-16 dark:from-[#1d140d] dark:via-[#23170e] dark:to-[#0f0a08]">
+      {/* Top glow */}
       <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 flex justify-center blur-3xl">
         <div className="h-44 w-[34rem] bg-gradient-to-r from-amber-300/50 via-orange-200/50 to-amber-100/50 opacity-60 dark:from-amber-500/25 dark:via-orange-500/25 dark:to-amber-500/25" />
       </div>
 
-      <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 sm:px-10 lg:px-16">
-        <header className="max-w-2xl">
+      <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 sm:px-10 lg:px-16">
+        <header className="max-w-3xl">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-300/60 bg-amber-100/70 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-amber-800 dark:border-amber-500/40 dark:bg-amber-500/10 dark:text-amber-200">
+            <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-amber-500/90" aria-hidden />
+            Scaffolding preview — content intentionally light
+          </div>
           <h1 className="text-4xl font-semibold text-stone-900 dark:text-amber-100">Projects</h1>
           <p className="mt-4 text-lg leading-relaxed text-stone-700 dark:text-amber-200/80">
-            A mix of builds, experiments, and half-finished ideas. Each card expands so I can dump notes, track progress, or eventually turn it into a proper writeup.
+            This page is a working mock. It shows how project cards expand, where notes will live,
+            and how metrics/milestones render. Lower expectations now; raise them later. When real
+            projects are ready, these placeholders get replaced.
           </p>
         </header>
 
@@ -204,9 +212,7 @@ export default function Page() {
               <article
                 key={project.id}
                 className={`group relative flex h-full flex-col overflow-hidden rounded-3xl border border-amber-200/60 bg-amber-50/80 p-8 shadow-xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:border-stone-700/60 dark:bg-stone-950/70 ${
-                  isExpanded
-                    ? 'ring-2 ring-amber-300/60 lg:p-12 xl:p-14 dark:ring-amber-400/60'
-                    : ''
+                  isExpanded ? 'ring-2 ring-amber-300/60 lg:p-12 xl:p-14 dark:ring-amber-400/60' : ''
                 }`}
               >
                 <button
@@ -253,7 +259,11 @@ export default function Page() {
                   }`}
                   aria-hidden={!isExpanded}
                 >
-                  <div className={`mt-6 flex flex-col gap-6 overflow-hidden text-stone-700 dark:text-amber-200/80 ${isExpanded ? 'lg:gap-8' : ''}`}>
+                  <div
+                    className={`mt-6 flex flex-col gap-6 overflow-hidden text-stone-700 dark:text-amber-200/80 ${
+                      isExpanded ? 'lg:gap-8' : ''
+                    }`}
+                  >
                     {project.image ? (
                       <figure className="relative overflow-hidden rounded-2xl border border-amber-200/60 bg-white/60 shadow-inner dark:border-stone-700/60 dark:bg-stone-900/60">
                         <Image
@@ -274,11 +284,7 @@ export default function Page() {
                     <p className="text-sm uppercase tracking-wide text-amber-700/80 dark:text-amber-300/80">Focus</p>
                     <p className="text-base leading-relaxed">{project.focus}</p>
 
-                    <div
-                      className={`flex flex-col gap-6 ${
-                        isExpanded ? 'xl:flex-row xl:items-start xl:gap-10' : ''
-                      }`}
-                    >
+                    <div className={`flex flex-col gap-6 ${isExpanded ? 'xl:flex-row xl:items-start xl:gap-10' : ''}`}>
                       <div className={`space-y-6 ${isExpanded ? 'xl:flex-1' : ''}`}>
                         {project.sections.map((section) => (
                           <section key={section.heading} className="space-y-3">
@@ -296,10 +302,11 @@ export default function Page() {
                         className={`flex flex-col gap-6 rounded-2xl border border-amber-200/70 bg-white/70 p-5 shadow-inner dark:border-stone-700/70 dark:bg-stone-900/70 ${
                           isExpanded ? 'xl:max-w-sm xl:flex-none' : ''
                         }`}
+                        aria-label="Sidebar with placeholder metrics and milestones"
                       >
                         <div className="space-y-3">
                           <h3 className="text-sm font-semibold uppercase tracking-wide text-amber-700 dark:text-amber-300">
-                            Snapshot metrics
+                            Snapshot metrics (mock)
                           </h3>
                           <dl className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                             {project.metrics.map((metric) => (
@@ -315,11 +322,14 @@ export default function Page() {
 
                         <div className="space-y-3">
                           <h3 className="text-sm font-semibold uppercase tracking-wide text-amber-700 dark:text-amber-300">
-                            Milestones & notes
+                            Milestones & notes (to be replaced)
                           </h3>
                           <ul className="space-y-3">
                             {project.milestones.map((milestone) => (
-                              <li key={milestone.label} className="rounded-xl border border-amber-200/70 bg-amber-50/80 p-4 dark:border-stone-700/70 dark:bg-stone-800/60">
+                              <li
+                                key={milestone.label}
+                                className="rounded-xl border border-amber-200/70 bg-amber-50/80 p-4 dark:border-stone-700/70 dark:bg-stone-800/60"
+                              >
                                 <p className="text-xs font-semibold uppercase tracking-wide text-amber-700/80 dark:text-amber-200/80">
                                   {milestone.label}
                                 </p>
@@ -337,15 +347,17 @@ export default function Page() {
           })}
         </div>
 
+        {/* Footer callout to set expectations */}
         <div className="relative overflow-hidden rounded-3xl border border-amber-200/60 bg-amber-100/70 p-8 shadow-xl backdrop-blur-xl transition-colors dark:border-stone-700/60 dark:bg-stone-900/70">
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-transparent via-amber-200/20 to-orange-200/20 dark:via-amber-500/10 dark:to-amber-500/10" />
           <div className="relative flex flex-col gap-4 text-stone-800 dark:text-amber-100">
             <h2 className="text-2xl font-semibold">What’s next</h2>
             <p className="text-base leading-relaxed text-stone-600 dark:text-amber-200/80">
-              More projects will end up here once I’ve actually finished them. Until then, this is just a reminder that the page is still growing.
+              This page is a preview of structure and style. Content will get swapped in as
+              projects finish. If you’re here early, congrats — you’re seeing the scaffolding.
             </p>
             <p className="text-sm text-stone-500 dark:text-amber-200/70">
-              I’ll update it whenever something feels worth documenting.
+              Translated: lower expectations now, return later for the good stuff.
             </p>
           </div>
         </div>
