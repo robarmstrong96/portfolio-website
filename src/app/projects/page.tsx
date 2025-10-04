@@ -37,9 +37,9 @@ const projects = [
     status: 'Scaffolding',
     title: 'Project showcase (placeholder)',
     summary:
-      "You're looking at the *shell* for a future write‑up. This exists so you can see how entries will look and expand. Real content will land here once it exists.",
+      "You're looking at the *shell* for a future write‑up. It exists so you can see how entries will look and expand. Real content will land here once it exists.",
     focus:
-      'When there is an actual project, this block will explain the build, stack, and interesting problems solved — for now, it just proves the layout.',
+      'When an actual project exists, this block will explain the build, stack, and interesting problems solved — for now, it just proves the layout.',
     tags: ['Placeholder', 'Concept', 'Layout'],
     metrics: [
       { value: 'TBD', label: 'Launch target' },
@@ -200,7 +200,7 @@ export default function Page() {
           <p className="mt-4 text-lg leading-relaxed text-stone-700 dark:text-amber-200/80">
             This page is a working mock. It shows how project cards expand, where notes will live,
             and how metrics/milestones render. Lower expectations now; raise them later. When real
-            projects are ready, these placeholders get replaced.
+            projects are ready, these placeholders will be replaced.
           </p>
         </header>
 
@@ -330,7 +330,7 @@ export default function Page() {
                                 key={milestone.label}
                                 className="rounded-xl border border-amber-200/70 bg-amber-50/80 p-4 dark:border-stone-700/70 dark:bg-stone-800/60"
                               >
-                                <p className="text-xs font-semibold uppercase tracking-wide text-amber-700/80 dark:text-amber-200/80">
+                                <p className="text-xs font-semibold uppercase tracking-wide text-stone-900 dark:text-amber-100">
                                   {milestone.label}
                                 </p>
                                 <p className="mt-1 text-sm leading-relaxed">{milestone.description}</p>
@@ -357,7 +357,7 @@ export default function Page() {
               projects finish. If you’re here early, congrats — you’re seeing the scaffolding.
             </p>
             <p className="text-sm text-stone-500 dark:text-amber-200/70">
-              Translated: lower expectations now, return later for the good stuff.
+              Translated: lower expectations now and return later for the good stuff.
             </p>
           </div>
         </div>

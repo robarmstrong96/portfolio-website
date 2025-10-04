@@ -5,7 +5,7 @@ import { ConnectionCard, type ConnectionCardProps } from "./connection-card";
 
 const connections: ConnectionCardProps[] = [
   {
-    title: "Github",
+    title: "GitHub",
     description: "Code, experiments, and open-source contributions.",
     href: "https://github.com/robarmstrong96",
   },

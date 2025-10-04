@@ -26,7 +26,7 @@ export function PassionSection() {
         <p className="text-lg leading-relaxed">
           I work across software and hardware: writing code, putting together PCs, designing in CAD, and running a homelab.
         </p>
-        <p className="leading-relaxed">This site is a place to post projects and other noteworthy things as I go.</p>
+        <p className="leading-relaxed">This site is where I post projects and other noteworthy things as I go.</p>
         <p className="leading-relaxed">More will show up here over time.</p>
       </SkeletonReveal>
 

@@ -22,7 +22,7 @@ export default function DisplayContactInfoModal() {
         icon: "✉️",
       },
       {
-        label: "Github",
+        label: "GitHub",
         href: "https://github.com/robarmstrong96",
         display: "github.com/robarmstrong96",
         icon: "💻",
