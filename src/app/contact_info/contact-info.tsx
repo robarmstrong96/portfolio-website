@@ -92,7 +92,7 @@ export default function DisplayContactInfoModal() {
                         Let’s connect
                       </Dialog.Title>
                       <Dialog.Description className="text-sm text-stone-600 dark:text-amber-200/80">
-                        Pick whichever works best—email for direct contact or the socials to see what I’m working on.
+                        Pick whichever works best - email for direct contact or the socials to see what I’m working on.
                       </Dialog.Description>
                     </div>
 
