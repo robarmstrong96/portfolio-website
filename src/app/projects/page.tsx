@@ -6,7 +6,7 @@ import { ChevronDownIcon } from '@heroicons/react/24/outline';
 
 /**
  * NOTE TO FUTURE-ME / READERS
- * This page is a "Scaffolding Preview" — a working mock of the layout, copy tone,
+ * This page is a "Scaffolding Preview" - a working mock of the layout, copy tone,
  * and interactions for the eventual Projects page. Content is intentionally light,
  * numbers are placeholders, and the goal is to set expectations low: this is a
  * frame, not the finished painting. 🙂
@@ -39,7 +39,7 @@ const projects = [
     summary:
       "You're looking at the *shell* for a future write‑up. This exists so you can see how entries will look and expand. Real content will land here once it exists.",
     focus:
-      'When there is an actual project, this block will explain the build, stack, and interesting problems solved — for now, it just proves the layout.',
+      'When there is an actual project, this block will explain the build, stack, and interesting problems solved - for now, it just proves the layout.',
     tags: ['Placeholder', 'Concept', 'Layout'],
     metrics: [
       { value: 'TBD', label: 'Launch target' },
@@ -79,14 +79,14 @@ const projects = [
     status: 'Work in progress',
     title: 'Containerization & Homelab (preview)',
     summary:
-      'A proving ground for the page structure: cards expand, sections stack, and the sidebar shows metrics — all with mock values.',
+      'A proving ground for the page structure: cards expand, sections stack, and the sidebar shows metrics - all with mock values.',
     focus:
       'This is where I break and rebuild things: orchestration experiments, network setups, and self‑hosted services. The write‑up comes later; the frame is here now.',
     tags: ['Self-hosting', 'Containers', 'Lab'],
     metrics: [
-      { value: '—', label: 'Services running' },
-      { value: '—', label: 'Containers tested' },
-      { value: '—', label: 'Configs rewritten' },
+      { value: '-', label: 'Services running' },
+      { value: '-', label: 'Containers tested' },
+      { value: '-', label: 'Configs rewritten' },
     ],
     milestones: [
       {
@@ -136,14 +136,14 @@ const projects = [
     status: 'Work in progress',
     title: 'CAD & 3D Printing (preview)',
     summary:
-      'Designing parts in CAD and printing them to see what holds up in the real world — real galleries will replace this text later.',
+      'Designing parts in CAD and printing them to see what holds up in the real world - real galleries will replace this text later.',
     focus:
       'Mostly small runs: brackets, mounts, car bits, and opportunistic fixes. This is a preview slot so the layout isn’t empty.',
     tags: ['CAD', '3D Printing', 'Prototyping'],
     metrics: [
-      { value: '—', label: 'Designs drafted' },
-      { value: '—', label: 'Prints completed' },
-      { value: '—', label: 'Revisions made' },
+      { value: '-', label: 'Designs drafted' },
+      { value: '-', label: 'Prints completed' },
+      { value: '-', label: 'Revisions made' },
     ],
     milestones: [
       { label: 'Log designs', description: 'Drop models and quick notes on what worked or failed.' },
@@ -155,7 +155,7 @@ const projects = [
         heading: 'Design process',
         body: [
           'Quick sketches, CAD mockups, and how they translated into prints.',
-          'Informal notes — most of these are trial‑and‑error builds.',
+          'Informal notes - most of these are trial‑and‑error builds.',
         ],
       },
       {
@@ -372,7 +372,7 @@ export default function Page() {
             <h2 className="text-2xl font-semibold">What’s next</h2>
             <p className="text-base leading-relaxed text-stone-600 dark:text-amber-200/80">
               This page is a preview of structure and style. Content will get swapped in as
-              projects finish. If you’re here early, congrats — you’re seeing the scaffolding.
+              projects finish. If you’re here early, congrats - you’re seeing the scaffolding.
             </p>
             <p className="text-sm text-stone-500 dark:text-amber-200/70">
               Translated: lower expectations now, return later for the good stuff.
