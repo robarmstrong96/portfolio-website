@@ -328,12 +328,14 @@ export default function Page() {
                             {project.milestones.map((milestone) => (
                               <li
                                 key={milestone.label}
-                                className="rounded-xl border border-amber-200/70 bg-amber-50/80 p-4 dark:border-stone-700/70 dark:bg-stone-800/60"
+                                className="group/milestone rounded-xl border border-amber-200/70 bg-amber-50/80 p-4 transition-colors duration-300 hover:bg-amber-200/80 focus-within:bg-amber-200/80 dark:border-stone-700/70 dark:bg-stone-800/60 dark:hover:bg-stone-800/80 dark:focus-within:bg-stone-800/80"
                               >
-                                <p className="text-xs font-semibold uppercase tracking-wide text-stone-900 dark:text-amber-100">
+                                <p className="text-xs font-semibold uppercase tracking-wide text-stone-900 transition-colors group-hover/milestone:text-stone-950 dark:text-amber-100 dark:group-hover/milestone:text-amber-50">
                                   {milestone.label}
                                 </p>
-                                <p className="mt-1 text-sm leading-relaxed">{milestone.description}</p>
+                                <p className="mt-1 text-sm leading-relaxed text-stone-700 transition-colors group-hover/milestone:text-stone-900 dark:text-amber-200/80 dark:group-hover/milestone:text-amber-100">
+                                  {milestone.description}
+                                </p>
                               </li>
                             ))}
                           </ul>
