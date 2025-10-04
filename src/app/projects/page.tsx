@@ -244,7 +244,11 @@ export default function Page() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full bg-amber-200/80 px-3 py-1 text-xs font-medium text-amber-800 transition selection:bg-amber-300 selection:text-stone-900 group-hover:bg-amber-200 dark:bg-stone-800/70 dark:text-amber-200 dark:selection:bg-amber-500 dark:selection:text-stone-950"
+                        className={`rounded-full bg-amber-200/80 px-3 py-1 text-xs font-medium text-amber-800 transition selection:bg-amber-300 selection:text-stone-900 group-hover:bg-amber-200 dark:bg-stone-800/70 dark:text-amber-200 dark:selection:bg-amber-500 dark:selection:text-stone-950 ${
+                          isExpanded
+                            ? 'bg-amber-200 text-amber-950 dark:bg-stone-800 dark:text-amber-100'
+                            : ''
+                        }`}
                       >
                         {tag}
                       </span>
@@ -328,12 +332,22 @@ export default function Page() {
                             {project.milestones.map((milestone) => (
                               <li
                                 key={milestone.label}
-                                className="rounded-xl border border-amber-200/70 bg-amber-50/80 p-4 dark:border-stone-700/70 dark:bg-stone-800/60"
+                                className="group/milestone rounded-xl border border-amber-200/70 bg-amber-50/80 p-4 dark:border-stone-700/70 dark:bg-stone-800/60"
                               >
-                                <p className="text-xs font-semibold uppercase tracking-wide text-amber-700/80 dark:text-amber-200/80">
+                                <p
+                                  className={`text-xs font-semibold uppercase tracking-wide text-amber-700/80 dark:text-amber-200/80 ${
+                                    isExpanded ? 'text-amber-900 dark:text-amber-100' : ''
+                                  }`}
+                                >
                                   {milestone.label}
                                 </p>
-                                <p className="mt-1 text-sm leading-relaxed">{milestone.description}</p>
+                                <p
+                                  className={`mt-1 text-sm leading-relaxed ${
+                                    isExpanded ? 'text-stone-900 dark:text-amber-100' : ''
+                                  }`}
+                                >
+                                  {milestone.description}
+                                </p>
                               </li>
                             ))}
                           </ul>
