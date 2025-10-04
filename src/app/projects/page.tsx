@@ -244,10 +244,10 @@ export default function Page() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className={`rounded-full px-3 py-1 text-xs font-medium transition selection:bg-amber-300 selection:text-stone-900 group-hover:bg-amber-200 dark:selection:bg-amber-500 dark:selection:text-stone-950 ${
+                        className={`rounded-full px-3 py-1 text-xs font-medium transition selection:bg-amber-300 selection:text-stone-900 dark:selection:bg-amber-500 dark:selection:text-stone-950 ${
                           isExpanded
                             ? 'bg-amber-600 text-amber-50 shadow-sm ring-1 ring-amber-900/60 dark:bg-amber-400/90 dark:text-stone-950 dark:ring-amber-200/60'
-                            : 'bg-amber-200/80 text-amber-800 dark:bg-stone-800/70 dark:text-amber-200'
+                            : 'bg-amber-500 text-amber-50 shadow-sm ring-1 ring-amber-900/40 group-hover:bg-amber-500/90 dark:bg-amber-400/80 dark:text-stone-950 dark:ring-amber-200/50 dark:group-hover:bg-amber-400'
                         }`}
                       >
                         {tag}
