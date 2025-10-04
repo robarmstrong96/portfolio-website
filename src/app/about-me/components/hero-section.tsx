@@ -49,6 +49,7 @@ export function HeroSection() {
           isReady={heroIntroReady}
           className="rounded-3xl"
           contentClassName="flex flex-col gap-6 text-stone-900 dark:text-amber-100"
+          hideOverflow={false}
         >
           <div className="flex flex-wrap items-center gap-3 text-stone-600 dark:text-amber-200/80">
             <span className="rounded-full bg-amber-200 px-3 py-1 text-sm font-semibold text-amber-800 dark:bg-amber-900/50 dark:text-amber-200">

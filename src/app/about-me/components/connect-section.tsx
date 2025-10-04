@@ -35,6 +35,7 @@ export function ConnectSection() {
         isReady={introReady}
         className="rounded-3xl"
         contentClassName="space-y-6 text-stone-800 dark:text-amber-100"
+        hideOverflow={false}
       >
         <h2 className="text-2xl font-semibold">Connect with me</h2>
         <p>My work is on GitHub, LinkedIn, and here. Use the links below to check it out.</p>

@@ -76,25 +76,17 @@ export default function DisplayContactInfoModal() {
                 leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                 leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
               >
-                <Dialog.Panel className="relative mx-auto w-full max-w-lg transform overflow-hidden rounded-3xl border border-amber-200/60 bg-amber-50/95 text-left shadow-2xl transition-all dark:border-stone-700/70 dark:bg-stone-950/90">
-                  <div
-                    aria-hidden
-                    className="pointer-events-none absolute inset-0 bg-gradient-to-br from-amber-100/70 via-transparent to-orange-100/60 dark:from-stone-900/40 dark:via-transparent dark:to-stone-800/30"
-                  />
-                  <div
-                    aria-hidden
-                    className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-amber-500 via-orange-400 to-amber-300 dark:from-amber-400 dark:via-orange-500 dark:to-amber-500"
-                  />
+                <Dialog.Panel className="relative transform overflow-hidden rounded-3xl border border-amber-200/70 bg-amber-50/95 text-left shadow-xl transition-all dark:border-stone-700/70 dark:bg-stone-950/90">
                   <button
                     type="button"
                     onClick={() => setOpen(false)}
-                    className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-amber-300/60 bg-white/70 text-stone-600 transition-all hover:scale-105 hover:text-stone-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/50 dark:border-stone-700/60 dark:bg-stone-900/80 dark:text-amber-200 dark:hover:text-amber-100"
+                    className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-amber-300/70 bg-white/80 text-stone-600 transition-all hover:scale-105 hover:text-stone-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/50 dark:border-stone-700/60 dark:bg-stone-900/80 dark:text-amber-200 dark:hover:text-amber-100"
                   >
                     <span aria-hidden>×</span>
                     <span className="sr-only">Close contact info</span>
                   </button>
 
-                  <div className="relative space-y-6 px-6 py-6 sm:px-8">
+                  <div className="space-y-6 px-6 py-8 sm:px-8">
                     <div className="space-y-2 text-left">
                       <Dialog.Title className="text-2xl font-semibold text-stone-900 dark:text-amber-100">
                         Let’s connect
@@ -104,44 +96,38 @@ export default function DisplayContactInfoModal() {
                       </Dialog.Description>
                     </div>
 
-                    <ul className="grid gap-3">
+                    <ul className="space-y-5">
                       {contactMethods.map((method) => {
                         const isExternal = method.href.startsWith("http");
 
                         return (
-                          <li key={method.label}>
-                            <a
-                              className="group relative flex items-center justify-between gap-4 overflow-hidden rounded-2xl border border-amber-200/70 bg-white/80 px-4 py-3 text-left shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/50 dark:border-stone-700/60 dark:bg-stone-900/70"
-                              href={method.href}
-                              target={isExternal ? "_blank" : undefined}
-                              rel={isExternal ? "noopener noreferrer" : undefined}
+                          <li key={method.label} className="text-left">
+                            <Dialog.Title
+                              as="h3"
+                              className="flex items-center gap-2 text-base font-semibold leading-6 text-amber-900 dark:text-amber-200"
                             >
-                              <span
-                                aria-hidden
-                                className="absolute inset-0 -z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                                style={{
-                                  background:
-                                    "linear-gradient(135deg, rgba(255, 214, 153, 0.25), rgba(255, 240, 214, 0.45))",
-                                }}
-                              />
-                              <div className="flex items-center gap-3">
-                                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-100 text-xl dark:bg-amber-500/20" aria-hidden>
-                                  {method.icon}
-                                </span>
-                                <div>
-                                  <p className="text-sm font-semibold text-stone-900 dark:text-amber-100">{method.label}</p>
-                                  <p className="text-sm text-stone-600 transition-colors duration-300 group-hover:text-stone-800 dark:text-amber-200/80 dark:group-hover:text-amber-100">
-                                    {method.display}
-                                  </p>
-                                </div>
-                              </div>
-                              <span
-                                className="text-sm font-medium text-amber-600 transition-transform duration-300 group-hover:translate-x-1 dark:text-amber-300"
-                                aria-hidden
-                              >
-                                {isExternal ? "↗" : "→"}
+                              <span aria-hidden className="text-xl">
+                                {method.icon}
                               </span>
-                            </a>
+                              {method.label}
+                            </Dialog.Title>
+                            <div className="mt-1">
+                              <a
+                                className="group inline-flex items-center gap-2 text-sm font-medium text-amber-700 transition-colors hover:text-amber-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/50 dark:text-amber-200 dark:hover:text-amber-100"
+                                href={method.href}
+                                target={isExternal ? "_blank" : undefined}
+                                rel={isExternal ? "noopener noreferrer" : undefined}
+                              >
+                                <span className="relative after:absolute after:left-0 after:-bottom-0.5 after:block after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 group-hover:after:scale-x-100">
+                                  {method.display}
+                                </span>
+                                {isExternal ? (
+                                  <span aria-hidden className="text-base">
+                                    ↗
+                                  </span>
+                                ) : null}
+                              </a>
+                            </div>
                           </li>
                         );
                       })}

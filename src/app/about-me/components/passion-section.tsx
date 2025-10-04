@@ -20,6 +20,7 @@ export function PassionSection() {
         isReady={storyReady}
         className="rounded-3xl"
         contentClassName="space-y-6 text-stone-700 dark:text-amber-100/80"
+        hideOverflow={false}
       >
         <h2 className="text-2xl font-semibold text-stone-900 dark:text-amber-100">What drives me</h2>
         <p className="text-lg leading-relaxed">
