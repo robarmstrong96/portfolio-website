@@ -61,8 +61,8 @@ export function HeroSection() {
           </div>
           <h1 className="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">Hi, I’m Kyle.</h1>
           <p className="text-lg leading-relaxed text-stone-700 dark:text-amber-200/80">
-            I’m a full-stack engineer from Newport News, Virginia. I spend my time writing code, building small form-factor PCs,
-            designing parts in CAD, 3D printing, running a homelab, and making electronic music.
+            I’m a software engineer from Hampton Roads area in Virginia. I spend my time writing code, building small form-factor PCs,
+            designing parts in CAD, 3D printing, running a homelab, making electronic music, and various other things.
           </p>
         </SkeletonReveal>
         <div className="grid gap-6 sm:grid-cols-2 lg:mt-auto lg:pt-4">
