@@ -40,16 +40,16 @@ export default function DisplayContactInfoModal() {
   return (
     <>
       <button
-        className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full border border-amber-500/40 bg-amber-100/60 px-4 py-2 text-sm font-semibold text-amber-800 transition-all hover:border-amber-500 hover:bg-amber-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/50 dark:border-amber-400/40 dark:bg-amber-900/30 dark:text-amber-100 dark:hover:border-amber-300 dark:hover:bg-amber-900/20"
+        className="group rounded-md px-3 py-2 font-medium text-amber-800 transition-colors hover:text-amber-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/50 dark:text-amber-200 dark:hover:text-amber-100"
         onClick={() => setOpen(true)}
         type="button"
       >
         <span
-          aria-hidden
-          className="absolute inset-0 -z-10 bg-gradient-to-r from-amber-200/60 via-orange-200/50 to-amber-100/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:from-amber-500/30 dark:via-orange-500/30 dark:to-amber-400/30"
-        />
-        <span>Contact Info</span>
-        <span aria-hidden className="text-lg leading-none">✉️</span>
+          className="relative inline-flex items-center gap-2 before:absolute before:left-0 before:-bottom-1.5 before:block before:h-[2px] before:w-full before:origin-top-left before:scale-x-0 before:bg-current before:transition before:duration-300 before:ease-in-out group-hover:before:scale-x-100"
+        >
+          <span>Contact Info</span>
+          <span aria-hidden className="text-lg leading-none">✉️</span>
+        </span>
       </button>
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-50" onClose={setOpen}>

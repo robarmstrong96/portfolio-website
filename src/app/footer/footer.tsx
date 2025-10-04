@@ -5,17 +5,23 @@ import { useRouter } from "next/navigation";
 import DisplayContactInfoModal from "../contact_info/contact-info";
 
 export function Footer() {
+  const year = new Date().getFullYear();
   return (
     <footer className="fixed inset-x-0 bottom-0 z-50 h-20 border-t border-amber-200/60 bg-amber-100/90 backdrop-blur-xl shadow-md dark:border-stone-800/70 dark:bg-stone-950/85">
-      <nav className="mx-auto flex h-full w-full max-w-5xl items-center justify-center gap-6 px-6">
-        <PageButton
-          route={routes.find((i) => i.routeEnum == SelectedPage.ABOUTME)!}
-        />
-        <PageButton
-          route={routes.find((i) => i.routeEnum == SelectedPage.PROJECTS)!}
-        />
-        <DisplayContactInfoModal />
-      </nav>
+      <div className="mx-auto flex h-full w-full max-w-5xl flex-col items-center justify-center gap-2 px-6 sm:flex-row sm:justify-between sm:gap-6">
+        <nav className="flex items-center gap-6">
+          <PageButton
+            route={routes.find((i) => i.routeEnum == SelectedPage.ABOUTME)!}
+          />
+          <PageButton
+            route={routes.find((i) => i.routeEnum == SelectedPage.PROJECTS)!}
+          />
+          <DisplayContactInfoModal />
+        </nav>
+        <p className="text-xs font-medium text-amber-700/80 dark:text-amber-200/80 sm:text-sm">
+          © {year} Robert Armstrong. All rights reserved.
+        </p>
+      </div>
     </footer>
   );
 }
