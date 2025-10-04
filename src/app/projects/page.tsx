@@ -244,7 +244,7 @@ export default function Page() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full bg-amber-200/80 px-3 py-1 text-xs font-medium text-amber-800 transition selection:bg-amber-300 selection:text-stone-900 group-hover:bg-amber-200 dark:bg-stone-800/70 dark:text-amber-200 dark:selection:bg-amber-500 dark:selection:text-stone-950"
+                        className="rounded-full bg-amber-200/80 px-3 py-1 text-xs font-medium text-amber-800 transition-colors selection:bg-amber-300 selection:text-stone-900 group-hover:bg-amber-200 group-hover:text-amber-950 group-focus-within:bg-amber-200 group-focus-within:text-amber-950 dark:bg-stone-800/70 dark:text-amber-200 dark:selection:bg-amber-500 dark:selection:text-stone-950 dark:group-hover:bg-stone-800 dark:group-hover:text-amber-100 dark:group-focus-within:bg-stone-800 dark:group-focus-within:text-amber-100"
                       >
                         {tag}
                       </span>
